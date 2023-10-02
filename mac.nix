@@ -68,5 +68,6 @@
 
   imports = [
     ./modules/home-manager.nix
+    ./modules/vim.nix
   ];
 }
