@@ -1,14 +1,16 @@
 { config, pkgs, ... }:
 {
-  programs.vim = {
+  programs.neovim = {
     enable = true;
     defaultEditor = true;
-    settings = {
-      expandtab = true;
-      number = true;
-    };
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    plugins = with pkgs.vimPlugins; [
+      vim-airline
+    ];
     extraConfig = ''
-    filetype plugin indent on
+    filetype  on
 
     scriptencoding utf-8                " set character encoding
     set encoding=utf-8                  " same as above?
@@ -109,16 +111,6 @@
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#left_sep = ' '
     let g:airline#extensions#tabline#left_alt_sep = '|'
-
-    " configure vim-syntastic/syntastic file linter
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
 
     " Fold and show doctstring
     let g:SimpylFold_docstring_preview = 1
