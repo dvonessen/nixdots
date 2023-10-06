@@ -6,7 +6,11 @@
 * Adding nix-darwin
   * Configure Terminal Profile to use FiraCode NerdFont
 
-# Watch List
+## Questions
+
+* Do I have to add `source /Users/danielvonessen/.docker/init-bash.sh || true # Added by Docker Desktop` to zsh/bash configuration
+
+## Watch List
 
 * [atuin](https://github.com/atuinsh/atuin)
 * [autojump](https://github.com/wting/autojump)

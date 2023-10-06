@@ -70,6 +70,7 @@
     ./modules/home-manager.nix
     ./modules/nixpkgs.nix
     ./modules/zsh.nix
+    ./modules/bash.nix
     ./modules/nvim.nix
     ./modules/awscli.nix
   ];
