@@ -71,8 +71,8 @@
     ./modules/nixpkgs.nix
     ./modules/zsh.nix
     ./modules/bash.nix
+    ./modules/coreutils.nix
     ./modules/nvim.nix
     ./modules/awscli.nix
-    ./modules/bat.nix
   ];
 }
