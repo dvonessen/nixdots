@@ -31,8 +31,8 @@ alias systemctl='noglob systemctl'
 alias zre='source $HOME/.zshrc'
 
 # List files and dirs in color
-alias l='ls -lFh --color=auto'
-alias ll=l
+alias ll='ls -lFh --color=auto'
+alias l=ll
 alias la='ls -lAFh'
 alias ls='ls --color=auto'
 
