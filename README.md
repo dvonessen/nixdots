@@ -7,3 +7,4 @@
 # Watch List
 
 * [atuin](https://github.com/atuinsh/atuin)
+* [autojump](https://github.com/wting/autojump)
