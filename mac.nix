@@ -69,8 +69,8 @@
   imports = [
     ./modules/home-manager.nix
     ./modules/nixpkgs.nix
-    ./modules/nvim.nix
     ./modules/zsh.nix
+    ./modules/nvim.nix
     ./modules/awscli.nix
   ];
 }
