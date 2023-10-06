@@ -73,5 +73,6 @@
     ./modules/bash.nix
     ./modules/nvim.nix
     ./modules/awscli.nix
+    ./modules/bat.nix
   ];
 }

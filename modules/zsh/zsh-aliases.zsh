@@ -41,7 +41,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # Tailing logfiles
-t='tail -f'
+alias t='tail -f'
 
 alias df="df -h"
 
@@ -56,6 +56,11 @@ _sysupgrade() {
 }
 alias sysupgrade=_sysupgrade
 
-alias depl_dots="~/git/dvonessen/systemsetup/run.sh"
-alias systemsetup=depl_dots
-alias dots=depl_dots
+# Set aliases for cat to bat if bat exists.
+if command -v bat &> /dev/null; then
+    if [ $(uname) = "Darwin" ]; then
+        alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+    else
+        alias cat="bat"
+    fi
+fi
