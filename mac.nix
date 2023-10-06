@@ -69,5 +69,6 @@
   imports = [
     ./modules/home-manager.nix
     ./modules/nvim.nix
+    ./modules/zsh.nix
   ];
 }
