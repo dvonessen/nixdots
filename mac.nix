@@ -74,5 +74,6 @@
     ./modules/coreutils.nix
     ./modules/nvim.nix
     ./modules/awscli.nix
+    ./modules/firefox.nix
   ];
 }
