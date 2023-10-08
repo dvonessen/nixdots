@@ -16,7 +16,7 @@ export PAGER="less"
 # --quit-if-one-screen:  quit if content fills less than the screen
 # --no-init:             don't clear screen on exit
 # --mouse:               support mouse - only less version >=551 (`brew install less` on mac)
-export LESS='--RAW-CONTROL-CHARS --squeeze-blank-lines --quit-on-intr --quit-if-one-screen --no-init' # --mouse
+export LESS='--RAW-CONTROL-CHARS --squeeze-blank-lines --quit-on-intr --quit-if-one-screen --no-init --mouse'
 
 # Terminal configuration
 export TERM=xterm-256color # True Color support in terminals and TUI programs that support it (e.g. vim)

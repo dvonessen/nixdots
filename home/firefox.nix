@@ -2,9 +2,11 @@
 {
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox-bin;
+    # Do not install Firefox in home-manager context,
+    # it gets installed by homebrew with nix-darwin.
+    package = null;
     profiles = {
-      default = {
+      danielvonessen = {
         id = 0;
         isDefault = true;
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [

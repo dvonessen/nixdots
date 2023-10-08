@@ -4,10 +4,14 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
+      url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    };
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {
@@ -15,29 +19,35 @@
     };
     nixpkgs-firefox-darwin = {
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, ... }@inputs:
-    let
+  outputs = inputs@{ self, darwin, nixpkgs, home-manager, ... }:
+  {
+    darwinConfigurations."macdb" = darwin.lib.darwinSystem rec {
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      homeConfigurations."danielvonessen" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [
-          { nixpkgs.overlays = [
+      modules = [
+        {
+          nixpkgs.overlays = [
               inputs.nixpkgs-firefox-darwin.overlay
-              nur.overlay
-            ];
-          }
-          ./mac.nix
-        ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+              inputs.nur.overlay
+          ];
+        }
+        ./hosts/macdb.nix
+        # home manager
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.users."danielvonessen" = import ./home/default.nix;
+        }
+      ];
+      specialArgs = {
+        inherit inputs;
       };
     };
+    # formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
+};
 }
