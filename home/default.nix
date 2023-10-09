@@ -75,6 +75,7 @@
     ./bash.nix
     ./coreutils.nix
     ./nvim.nix
+    ./git.nix
     ./awscli.nix
     ./firefox.nix
   ];
