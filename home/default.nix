@@ -77,6 +77,7 @@
     ./nvim.nix
     ./git.nix
     ./awscli.nix
+    ./k8s.nix
     ./firefox.nix
   ];
 }
