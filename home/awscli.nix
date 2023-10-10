@@ -1,5 +1,9 @@
-{config, pkgs, libs, ...}:
 {
+  config,
+  pkgs,
+  libs,
+  ...
+}: {
   programs.awscli = {
     enable = true;
     settings = {

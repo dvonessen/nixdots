@@ -1,4 +1,9 @@
-{config, pkgs, libs, ...}: {
+{
+  config,
+  pkgs,
+  libs,
+  ...
+}: {
   # Create user danielvonessen
   users.users = {
     danielvonessen = {

@@ -1,7 +1,11 @@
-{config, pkgs, lib, ...}:
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Meslo" "FiraCode" "Ubuntu" "UbuntuMono"]; })
+    (nerdfonts.override {fonts = ["Meslo" "FiraCode" "Ubuntu" "UbuntuMono"];})
     less
   ];
   programs.zsh = {

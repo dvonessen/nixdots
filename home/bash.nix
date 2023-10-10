@@ -1,5 +1,9 @@
-{config, pkgs, libs, ...}:
 {
+  config,
+  pkgs,
+  libs,
+  ...
+}: {
   programs.bash = {
     enable = true;
     enableCompletion = true;

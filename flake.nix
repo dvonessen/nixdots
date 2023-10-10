@@ -23,15 +23,20 @@
     };
   };
 
-  outputs = inputs@{ self, darwin, nixpkgs, home-manager, ... }:
-  {
+  outputs = inputs @ {
+    self,
+    darwin,
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     darwinConfigurations."macdb" = darwin.lib.darwinSystem rec {
       system = "aarch64-darwin";
       modules = [
         {
           nixpkgs.overlays = [
-              inputs.nixpkgs-firefox-darwin.overlay
-              inputs.nur.overlay
+            inputs.nixpkgs-firefox-darwin.overlay
+            inputs.nur.overlay
           ];
         }
         ./hosts/macdb.nix
@@ -40,7 +45,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.extraSpecialArgs = {inherit inputs;};
           home-manager.users."danielvonessen" = import ./home/default.nix;
         }
       ];
@@ -48,6 +53,6 @@
         inherit inputs;
       };
     };
-    # formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
-};
+    formatter.aarch64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
+  };
 }
