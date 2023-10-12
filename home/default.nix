@@ -25,6 +25,7 @@
     packages = with pkgs; [
       htop
       btop
+      nixd # Nix LSP
       # # Adds the 'hello' command to your environment. It prints a friendly
       # # "Hello, world!" when run.
       # pkgs.hello
