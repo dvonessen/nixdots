@@ -48,5 +48,10 @@
     lesspipe = {
       enable = true;
     };
+
+    man = {
+      enable = true;
+      generateCaches = true;
+    };
   };
 }
