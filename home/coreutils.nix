@@ -40,5 +40,13 @@
     jq = {
       enable = true;
     };
+
+    less = {
+      enable = true;
+    };
+
+    lesspipe = {
+      enable = true;
+    };
   };
 }
