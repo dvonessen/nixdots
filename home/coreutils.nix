@@ -4,26 +4,37 @@
   libs,
   ...
 }: {
-  programs.bat = {
-    enable = true;
-  };
+  programs = {
 
-  programs.eza = {
-    enable = true;
-    enableAliases = true;
-    extraOptions = [
-      "--icons"
-      "--group-directories-first"
-      "--group"
-      "--header"
-      "--mounts"
-      "--git"
-    ];
-  };
+    bat = {
+      enable = true;
+    };
 
-  programs.fzf = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
+    eza = {
+      enable = true;
+      enableAliases = true;
+      extraOptions = [
+        "--icons"
+        "--group-directories-first"
+        "--group"
+        "--header"
+        "--mounts"
+        "--git"
+      ];
+    };
+
+    fzf = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
+
+    htop = {
+      enable = true;
+    };
+
+    info = {
+      enable = true;
+    };
   };
 }

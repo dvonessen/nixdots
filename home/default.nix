@@ -67,7 +67,7 @@
     # or
     #
     #  /etc/profiles/per-user/danielvonessen/etc/profile.d/hm-session-vars.sh
-    #eza
+    #
     # if you don't want to manage your shell through Home Manager.
     sessionVariables = {
     };
