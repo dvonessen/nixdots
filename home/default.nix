@@ -74,6 +74,8 @@
   };
 
   imports = [
+    inputs.agenix.homeManagerModules.default
+    ./home-secrets.nix
     ./home-manager.nix
     ./nixpkgs.nix
     ./xdg.nix

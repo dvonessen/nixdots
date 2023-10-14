@@ -21,6 +21,10 @@
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -28,6 +32,7 @@
     darwin,
     nixpkgs,
     home-manager,
+    agenix,
     ...
   }: {
     darwinConfigurations."macdb" = darwin.lib.darwinSystem rec {
@@ -45,7 +50,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = {inherit inputs;};
+          home-manager.extraSpecialArgs = {inherit inputs system;};
           home-manager.users."danielvonessen" = import ./home/default.nix;
         }
       ];
