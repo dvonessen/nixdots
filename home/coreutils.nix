@@ -53,5 +53,13 @@
       enable = true;
       generateCaches = true;
     };
+
+    mcfly = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      fuzzySearchFactor = 2;
+      keyScheme = "vim";
+    };
   };
 }

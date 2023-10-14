@@ -15,3 +15,5 @@
 * [atuin](https://github.com/atuinsh/atuin)
 * [autojump](https://github.com/wting/autojump)
 * [joshuto](https://github.com/kamiyaa/joshuto) Ranger like terminal based filemanager.
+* [lsd](https://github.com/lsd-rs/lsd) Should I consider an alternative to `eza` (ls alternative)?
+* [mr](https://myrepos.branchable.com/) is a repository manager called myrepos.

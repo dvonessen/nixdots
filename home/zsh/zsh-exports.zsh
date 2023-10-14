@@ -51,3 +51,16 @@ export GPG_TTY=$(tty)
 if [ $(uname) = "Darwin" ]; then
     export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 fi
+
+if command -v mcfly &> /dev/null ; then
+    export MCFLY_INTERFACE_VIEW=bottom
+    export MCFLY_RESULTS_SORT=LAST_RUN
+    export MCFLY_PROMPT="❯"
+    export MCFLY_RESULTS=50
+    if [[ $(uname) = "Darwin" ]]; then
+        # Enable dark/light theme switching based on interface style.
+        if [[ "$(defaults read -g AppleInterfaceStyle 2&>/dev/null)" != "Dark" ]]; then
+            export MCFLY_LIGHT=TRUE
+        fi
+    fi
+fi
