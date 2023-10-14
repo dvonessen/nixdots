@@ -36,5 +36,9 @@
     info = {
       enable = true;
     };
+
+    jq = {
+      enable = true;
+    };
   };
 }
