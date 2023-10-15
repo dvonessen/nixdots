@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
     extensions = with pkgs; [
@@ -78,9 +78,9 @@
       "editor.renderLineHighlight" = "all";
       "editor.renderWhitespace" = "boundary";
       "editor.rulers" = [
-          79
-          119
-          139
+        79
+        119
+        139
       ];
       "editor.inlineSuggest.enabled" = "true";
       "python.linting.flake8Path" = "flake8";
@@ -123,21 +123,21 @@
       "python.experiments.enabled" = "false";
       "redhat.telemetry.enabled" = "false";
       "vs-kubernetes" = {
-          "vs-kubernetes.namespace" = "";
-          "vs-kubernetes.minikube-path" = "";
-          "vs-kubernetes.kubectlVersioning" = "user-provided";
-          "vs-kubernetes.outputFormat" = "yaml";
-          "vs-kubernetes.kubeconfig" = "";
-          "vs-kubernetes.knownKubeconfigs" = [];
-          "vs-kubernetes.autoCleanupOnDebugTerminate" = "false";
-          "vs-kubernetes.nodejs-autodetect-remote-root" = "true";
-          "vs-kubernetes.nodejs-remote-root" = "";
-          "vs-kubernetes.nodejs-debug-port" = 9229;
-          "vs-kubernetes.dotnet-vsdbg-path" = "~/vsdbg/vsdbg";
-          "vs-kubernetes.local-tunnel-debug-provider" = "";
-          "checkForMinikubeUpgrade" = "true";
-          "imageBuildTool" = "Buildah";
-          "vs-kubernetes.crd-code-completion" = "enabled";
+        "vs-kubernetes.namespace" = "";
+        "vs-kubernetes.minikube-path" = "";
+        "vs-kubernetes.kubectlVersioning" = "user-provided";
+        "vs-kubernetes.outputFormat" = "yaml";
+        "vs-kubernetes.kubeconfig" = "";
+        "vs-kubernetes.knownKubeconfigs" = [];
+        "vs-kubernetes.autoCleanupOnDebugTerminate" = "false";
+        "vs-kubernetes.nodejs-autodetect-remote-root" = "true";
+        "vs-kubernetes.nodejs-remote-root" = "";
+        "vs-kubernetes.nodejs-debug-port" = 9229;
+        "vs-kubernetes.dotnet-vsdbg-path" = "~/vsdbg/vsdbg";
+        "vs-kubernetes.local-tunnel-debug-provider" = "";
+        "checkForMinikubeUpgrade" = "true";
+        "imageBuildTool" = "Buildah";
+        "vs-kubernetes.crd-code-completion" = "enabled";
       };
       "oneDarkPro.editorTheme" = "Gnome";
       "workbench.iconTheme" = "file-icons";
@@ -148,43 +148,43 @@
       "eslint.format.enable" = "true";
       "eslint.lintTask.enable" = "true";
       "editor.codeActionsOnSave" = {
-          "source.fixAll" = "true";
+        "source.fixAll" = "true";
       };
       "eslint.workingDirectories" = [
-          {
-              "mode" = "auto";
-          }
+        {
+          "mode" = "auto";
+        }
       ];
       "[typescript]" = {
-          "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
+        "editor.defaultFormatter" = "dbaeumer.vscode-eslint";
       };
       "workbench.editor.untitled.hint" = "hidden";
       "[yaml]" = {
-          "editor.insertSpaces" = "true";
-          "editor.tabSize" = 2;
-          "editor.autoIndent" = "keep";
-          "gitlens.codeLens.scopes" = [
-              "document"
-          ];
-          "editor.quickSuggestions" = {
-              "other" = "true";
-              "comments" = "false";
-              "strings" = "true";
-          };
+        "editor.insertSpaces" = "true";
+        "editor.tabSize" = 2;
+        "editor.autoIndent" = "keep";
+        "gitlens.codeLens.scopes" = [
+          "document"
+        ];
+        "editor.quickSuggestions" = {
+          "other" = "true";
+          "comments" = "false";
+          "strings" = "true";
+        };
       };
       "sops.beta" = "true";
       "[dockerfile]" = {
-          "editor.defaultFormatter" = "foxundermoon.shell-format";
+        "editor.defaultFormatter" = "foxundermoon.shell-format";
       };
       "python.formatting.provider" = "black";
       "python.linting.enabled" = "true";
       "python.linting.lintOnSave" = "true";
       "[markdown]" = {
-          "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
+        "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
       };
       "autoDocstring.startOnNewLine" = "true";
       "projectManager.git.baseFolders" = [
-          "~/git"
+        "~/git"
       ];
       "projectManager.git.maxDepthRecursion" = 10;
       "workbench.colorTheme" = "Default Dark+";

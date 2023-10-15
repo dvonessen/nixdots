@@ -10,9 +10,9 @@
   home.file = {
     awscli-config = {
       text = ''
-      [default]
-      output=json
-      region=eu-central-1
+        [default]
+        output=json
+        region=eu-central-1
       '';
       target = "./.aws/config";
     };
