@@ -83,5 +83,14 @@
       enableBashIntegration = true;
       enableZshIntegration = true;
     };
+
+    zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
   };
 }
