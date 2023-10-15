@@ -82,6 +82,7 @@
     ./zsh.nix
     ./bash.nix
     ./coreutils.nix
+    ./tmux.nix
     ./ssh-client.nix
     ./nvim.nix
     ./git.nix

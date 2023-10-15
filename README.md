@@ -16,6 +16,7 @@
 * Directory autojumper
   * [autojump](https://github.com/wting/autojump) written in python
   * [pazi](https://github.com/euank/pazi) written in rust -> faster
+  * [zoxide](https://github.com/ajeetdsouza/zoxide)
 * [joshuto](https://github.com/kamiyaa/joshuto) Ranger like terminal based filemanager.
 * `ls` alternatives
   * [lsd](https://github.com/lsd-rs/lsd) Should I consider an alternative to `eza` (ls alternative)?
@@ -28,3 +29,9 @@
 * Fuzzy finder
   * [skim](https://github.com/lotabout/skim)
   * [fzf](https://github.com/junegunn/fzf)
+* Terminal and Multiplexer
+  * [wezterm](https://wezfurlong.org/wezterm/)
+* Terminal filebrowser
+  * [ranger](https://github.com/ranger/ranger)
+  * [xplr](https://xplr.dev/)
+  * [yazi](https://github.com/sxyazi/yazi)
