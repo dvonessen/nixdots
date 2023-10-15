@@ -23,3 +23,8 @@
 * [navi](https://github.com/denisidoro/navi) An interactive cheatsheet tool for the command-line.
 * [pet](https://github.com/knqyf263/pet) same as navi but different?
 * [rbw](https://github.com/doy/rbw) consider using rbw instead of the official bitwarden-cli.
+* [rtx](https://github.com/jdx/rtx) consider using rtx as a replacement for pyenv and nve?
+* [scmpuff](https://github.com/mroth/scmpuff) simpler git client?
+* Fuzzy finder
+  * [skim](https://github.com/lotabout/skim)
+  * [fzf](https://github.com/junegunn/fzf)

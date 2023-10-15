@@ -4,4 +4,5 @@ let
   users = [agenix];
 in {
   "awscli-credentials.age".publicKeys = users;
+  "ssh-clients-config.age".publicKeys = users;
 }
