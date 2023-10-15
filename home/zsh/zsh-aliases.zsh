@@ -7,8 +7,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias hgrep='history 0 |grep --color=auto '
-alias fuck='sudo !!'
-alias please=fuck
+alias please='sudo !!'
+alias pls='sudo !!'
 alias ports='netstat -tlpen'
 # git aliase
 alias ggrep='git grep'

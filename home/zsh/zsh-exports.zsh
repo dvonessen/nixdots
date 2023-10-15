@@ -64,3 +64,10 @@ if command -v mcfly &> /dev/null ; then
         fi
     fi
 fi
+
+if command -v fuck &> /dev/null; then
+    # Exclude fix_file rule, fuck will prefix each
+    # autocorrection with vim FILENAME && command
+    # See https://github.com/nvbn/thefuck/issues/1153
+    export THEFUCK_EXCLUDE_RULES=fix_file
+fi
