@@ -64,3 +64,8 @@ if command -v bat &> /dev/null; then
         alias cat="bat"
     fi
 fi
+
+# Alias grep with ripgrep to have a better grep tool.
+if command -v rg &> /dev/null; then
+    alias grep="rg"
+fi

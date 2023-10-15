@@ -13,7 +13,13 @@
 ## Watch List
 
 * [atuin](https://github.com/atuinsh/atuin)
-* [autojump](https://github.com/wting/autojump)
+* Directory autojumper
+  * [autojump](https://github.com/wting/autojump) written in python
+  * [pazi](https://github.com/euank/pazi) written in rust -> faster
 * [joshuto](https://github.com/kamiyaa/joshuto) Ranger like terminal based filemanager.
-* [lsd](https://github.com/lsd-rs/lsd) Should I consider an alternative to `eza` (ls alternative)?
+* `ls` alternatives
+  * [lsd](https://github.com/lsd-rs/lsd) Should I consider an alternative to `eza` (ls alternative)?
 * [mr](https://myrepos.branchable.com/) is a repository manager called myrepos.
+* [navi](https://github.com/denisidoro/navi) An interactive cheatsheet tool for the command-line.
+* [pet](https://github.com/knqyf263/pet) same as navi but different?
+* [rbw](https://github.com/doy/rbw) consider using rbw instead of the official bitwarden-cli.

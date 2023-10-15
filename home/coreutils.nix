@@ -61,5 +61,9 @@
       fuzzySearchFactor = 2;
       keyScheme = "vim";
     };
+
+    ripgrep = {
+      enable = true;
+    };
   };
 }
