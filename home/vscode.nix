@@ -1,30 +1,34 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [
+    shellcheck # Used for shellcheck vscode extension
+  ];
+
   programs.vscode = {
     enable = true;
     extensions = with pkgs; [
-      vscode-extensions.streetsidesoftware.code-spell-checker
-      vscode-extensions.ms-azuretools.vscode-docker
-      vscode-extensions.gitlab.gitlab-workflow
-      vscode-extensions.eamodio.gitlens
-      vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
-      vscode-extensions.davidanson.vscode-markdownlint
-      vscode-extensions.christian-kohler.path-intellisense
-      # vscode-extensions.ms-python.vscode-pylance # Unfree
-      vscode-extensions.ms-python.python
-      # vscode-extensions.vivaxy.vscode-conventional-commits
-      # vscode-extensions.ryanluker.vscode-coverage-gutters
-      vscode-extensions.file-icons.file-icons
-      # vscode-extensions.streetsidesoftware.code-spell-checker-german
-      vscode-extensions.donjayamanne.githistory
-      # vscode-extensions.exiasr.hadolint
-      # vscode-extensions.visualstudioexptteam.vscodeintellicode
-      # vscode-extensions.visualstudioexptteam.vscodeintellicode-completions
-      # vscode-extensions.visualstudioexptteam.intellicode-api-usage-examples
-      # vscode-extensions.rlnt.keep-a-changelog
-      vscode-extensions.yzhang.markdown-all-in-one
       vscode-extensions.alefragnani.project-manager
-      vscode-extensions.timonwong.shellcheck
+      vscode-extensions.christian-kohler.path-intellisense
+      vscode-extensions.davidanson.vscode-markdownlint
+      vscode-extensions.donjayamanne.githistory
+      vscode-extensions.eamodio.gitlens
+      #vscode-extensions.exiasr.hadolint
+      vscode-extensions.file-icons.file-icons
       vscode-extensions.foxundermoon.shell-format
+      vscode-extensions.gitlab.gitlab-workflow
+      vscode-extensions.ms-azuretools.vscode-docker
+      vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
+      vscode-extensions.ms-python.python
+      vscode-extensions.ms-python.vscode-pylance # Unfree
+      #vscode-extensions.rlnt.keep-a-changelog
+      #vscode-extensions.ryanluker.vscode-coverage-gutters
+      vscode-extensions.streetsidesoftware.code-spell-checker
+      #vscode-extensions.streetsidesoftware.code-spell-checker-german
+      vscode-extensions.timonwong.shellcheck
+      #vscode-extensions.visualstudioexptteam.intellicode-api-usage-examples
+      #vscode-extensions.visualstudioexptteam.vscodeintellicode
+      #vscode-extensions.visualstudioexptteam.vscodeintellicode-completions
+      #vscode-extensions.vivaxy.vscode-conventional-commits
+      vscode-extensions.yzhang.markdown-all-in-one
     ];
     keybindings = [
       {

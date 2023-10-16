@@ -6,6 +6,9 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+    };
     darwin = {
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,50 +17,56 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur = {
-      url = "github:nix-community/NUR";
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-firefox-darwin = {
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    agenix = {
-      url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = inputs @ {
     self,
-    darwin,
     nixpkgs,
+    nur,
+    darwin,
     home-manager,
     agenix,
+    nixpkgs-firefox-darwin,
     ...
-  }: {
-    darwinConfigurations."macdb" = darwin.lib.darwinSystem rec {
+  }:
+    let
       system = "aarch64-darwin";
-      modules = [
-        {
-          nixpkgs.overlays = [
-            inputs.nixpkgs-firefox-darwin.overlay
-            inputs.nur.overlay
-          ];
-        }
-        ./hosts/macdb.nix
-        # home manager
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = {inherit inputs system;};
-          home-manager.users."danielvonessen" = import ./home/default.nix;
-        }
-      ];
-      specialArgs = {
-        inherit inputs;
+      pkgs = import nixpkgs {
+        system = "aarch64-darwin";
+        hostPlatform = system;
+        config.allowUnfree = true;
+        overlays = [
+          nixpkgs-firefox-darwin.overlay
+          nur.overlay
+        ];
       };
+    in
+    {
+      darwinConfigurations."macdb" = darwin.lib.darwinSystem rec {
+        inherit system pkgs;
+        modules = [
+          ./hosts/macdb.nix
+          # home manager
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs system;};
+            home-manager.users."danielvonessen" = import ./home/default.nix;
+          }
+        ];
+        specialArgs = {
+          inherit inputs system;
+        };
+      };
+      formatter.aarch64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
     };
-    formatter.aarch64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
-  };
 }

@@ -35,3 +35,7 @@
   * [ranger](https://github.com/ranger/ranger)
   * [xplr](https://xplr.dev/)
   * [yazi](https://github.com/sxyazi/yazi)
+* Kubernetes Tools
+  * [kubeswitch](https://github.com/danielfoehrKn/kubeswitch) Drop-in replacement for kubectx
+  * [NixPkgs Search for Kubectl](https://search.nixos.org/packages?channel=23.05&from=0&size=50&sort=relevance&type=packages&query=kubectl)
+    Look, maybe there are some useful tools.
