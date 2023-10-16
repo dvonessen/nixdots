@@ -5,30 +5,31 @@
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs; [
-      vscode-extensions.alefragnani.project-manager
-      vscode-extensions.christian-kohler.path-intellisense
-      vscode-extensions.davidanson.vscode-markdownlint
-      vscode-extensions.donjayamanne.githistory
-      vscode-extensions.eamodio.gitlens
-      #vscode-extensions.exiasr.hadolint
-      vscode-extensions.file-icons.file-icons
-      vscode-extensions.foxundermoon.shell-format
-      vscode-extensions.gitlab.gitlab-workflow
-      vscode-extensions.ms-azuretools.vscode-docker
-      vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
-      vscode-extensions.ms-python.python
-      vscode-extensions.ms-python.vscode-pylance # Unfree
-      #vscode-extensions.rlnt.keep-a-changelog
-      #vscode-extensions.ryanluker.vscode-coverage-gutters
-      vscode-extensions.streetsidesoftware.code-spell-checker
-      #vscode-extensions.streetsidesoftware.code-spell-checker-german
-      vscode-extensions.timonwong.shellcheck
-      #vscode-extensions.visualstudioexptteam.intellicode-api-usage-examples
-      #vscode-extensions.visualstudioexptteam.vscodeintellicode
-      #vscode-extensions.visualstudioexptteam.vscodeintellicode-completions
-      #vscode-extensions.vivaxy.vscode-conventional-commits
-      vscode-extensions.yzhang.markdown-all-in-one
+    extensions = with pkgs.vscode-marketplace; [
+      alefragnani.project-manager
+      christian-kohler.path-intellisense
+      davidanson.vscode-markdownlint
+      donjayamanne.githistory
+      eamodio.gitlens
+      exiasr.hadolint
+      file-icons.file-icons
+      foxundermoon.shell-format
+      gitlab.gitlab-workflow
+      ms-azuretools.vscode-docker
+      ms-kubernetes-tools.vscode-kubernetes-tools
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-vscode.live-server
+      rlnt.keep-a-changelog
+      ryanluker.vscode-coverage-gutters
+      streetsidesoftware.code-spell-checker
+      streetsidesoftware.code-spell-checker-german
+      timonwong.shellcheck
+      visualstudioexptteam.intellicode-api-usage-examples
+      visualstudioexptteam.vscodeintellicode
+      visualstudioexptteam.vscodeintellicode-completions
+      vivaxy.vscode-conventional-commits
+      yzhang.markdown-all-in-one
     ];
     keybindings = [
       {

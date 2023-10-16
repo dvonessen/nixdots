@@ -25,6 +25,10 @@
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -35,6 +39,7 @@
     home-manager,
     agenix,
     nixpkgs-firefox-darwin,
+    nix-vscode-extensions,
     ...
   }:
     let
@@ -44,8 +49,9 @@
         hostPlatform = system;
         config.allowUnfree = true;
         overlays = [
-          nixpkgs-firefox-darwin.overlay
           nur.overlay
+          nixpkgs-firefox-darwin.overlay
+          nix-vscode-extensions.overlays.default
         ];
       };
     in
