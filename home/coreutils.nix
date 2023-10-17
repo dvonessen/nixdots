@@ -4,6 +4,24 @@
   libs,
   ...
 }: {
+
+  home.packages = with pkgs; [
+    gnutar
+    iperf
+    lego
+    netcat
+    nmap
+    p7zip
+    restic
+    sops
+    watch
+    wget
+    yq-go
+    htop
+    btop
+    nixd
+  ];
+
   programs = {
     bat = {
       enable = true;
