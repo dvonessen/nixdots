@@ -19,7 +19,7 @@
   };
   age.secrets = {
     "awscli-credentials" = {
-      file = ../agenix/awscli-credentials.age;
+      file = ../../agenix/awscli-credentials.age;
       path = "${config.home.homeDirectory}/.aws/credentials";
     };
   };

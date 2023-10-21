@@ -14,7 +14,7 @@
   };
 
   age.secrets.ssh-clients-config = {
-    file = ../agenix/ssh-clients-config.age;
+    file = ../../agenix/ssh-clients-config.age;
     path = "${config.home.homeDirectory}/.ssh/clients.config";
   };
 }

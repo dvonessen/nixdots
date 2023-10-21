@@ -3,6 +3,7 @@
   pkgs,
   inputs,
   libs,
+  agenix,
   ...
 }: {
   home = {
@@ -71,7 +72,7 @@
   };
 
   imports = [
-    inputs.agenix.homeManagerModules.default
+    agenix.homeManagerModules.default
     ./home-secrets.nix
     ./home-manager.nix
     ./nixpkgs.nix

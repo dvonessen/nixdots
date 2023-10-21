@@ -1,8 +1,8 @@
-{...}: {
+{userfullname, usermail, userbusinessmail, ...}: {
   programs.git = {
     enable = true;
-    userName = "Daniel von Eßen";
-    userEmail = "daniel@vonessen.eu";
+    userName = userfullname;
+    userEmail = usermail;
     extraConfig = {
       core = {
         autocrlf = "input";
@@ -23,15 +23,15 @@
     includes = [
       {
         contents = {
-          user.email = "daniel.von-essen@deutschebahn.com";
-          user.name = "Daniel von Eßen";
+          user.email = userbusinessmail;
+          user.name = userfullname;
         };
         condition = "gitdir:~/git/dbsystel/**";
       }
       {
         contents = {
-          user.email = "daniel.von-essen@deutschebahn.com";
-          user.name = "Daniel von Eßen";
+          user.email = userbusinessmail;
+          user.name = userfullname;
         };
         condition = "gitdir:~/git/gitlab/dbsystel/**";
       }

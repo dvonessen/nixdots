@@ -39,3 +39,25 @@
   * [kubeswitch](https://github.com/danielfoehrKn/kubeswitch) Drop-in replacement for kubectx
   * [NixPkgs Search for Kubectl](https://search.nixos.org/packages?channel=23.05&from=0&size=50&sort=relevance&type=packages&query=kubectl)
     Look, maybe there are some useful tools.
+
+## Login Items
+
+There is not easy option to create Login Items in macOS.
+The applications do have to be manually added to the Login Items.
+`System Settings -> General -> Login Items -> Open at Login`
+* Bitwarden
+* Caffeine
+* Calendar
+* Docker Desktop
+* Ferdium
+* Firefox
+* Mail
+* Nextcloud
+* Rectangle
+* Spotify
+* VSCode
+
+## Homebrew installation
+
+* LogiOptions+
+* WireGuard

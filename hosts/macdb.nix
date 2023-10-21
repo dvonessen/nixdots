@@ -1,21 +1,31 @@
 {
-  config,
-  pkgs,
-  libs,
+  nix-darwin,
+  home-manager,
+  specialArgs,
+  system,
+  agenix,
   ...
-}: {
-  # Create user danielvonessen
-  users.users = {
-    danielvonessen = {
-      name = "danielvonessen";
-      home = "/Users/danielvonessen";
-    };
-  };
-  programs.zsh.enable = true;
-  programs.bash.enable = true;
-  services.nix-daemon.enable = true;
+}:
+  let
+    username = specialArgs.username;
+  in
+    nix-darwin.lib.darwinSystem {
+      inherit system specialArgs;
+      modules = [
+        ../darwin
+        agenix.darwinModules.default
 
-  imports = [
-    ../darwin/homebrew.nix
-  ];
-}
+        # home manager
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = specialArgs;
+          home-manager.users.${username} = {
+            imports = [
+              ../home/common
+            ];
+          };
+        }
+      ];
+    }

@@ -4,38 +4,42 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs = {
+      url = "github:nixos/nixpkgs/23.05";
+    };
+    nixpkgs-unstable = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
     nur = {
       url = "github:nix-community/NUR";
     };
-    darwin = {
+    nix-darwin = {
       url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     home-manager = {
       url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     agenix = {
       url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     nixpkgs-firefox-darwin = {
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     nur,
-    darwin,
+    nix-darwin,
     home-manager,
     agenix,
     nixpkgs-firefox-darwin,
@@ -43,36 +47,36 @@
     ...
   }:
     let
-      system = "aarch64-darwin";
-      pkgs = import nixpkgs {
-        system = "aarch64-darwin";
-        hostPlatform = system;
-        config.allowUnfree = true;
-        overlays = [
-          nur.overlay
-          nixpkgs-firefox-darwin.overlay
-          nix-vscode-extensions.overlays.default
-        ];
-      };
-    in
-    {
-      darwinConfigurations."macdb" = darwin.lib.darwinSystem rec {
-        inherit system pkgs;
-        modules = [
-          ./hosts/macdb.nix
-          # home manager
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = {inherit inputs system;};
-            home-manager.users."danielvonessen" = import ./home/default.nix;
-          }
-        ];
+      username = "danielvonessen";
+      userfullname = "Daniel von Eßen";
+      usermail = "daniel@vonessen.eu";
+      userbusinessmail = "daniel.von-essen@deutschebahn.com";
+
+      aarch64_darwin = "aarch64-darwin";
+      allSystems = [ aarch64_darwin ];
+    in {
+      darwinConfigurations = let
+        system = aarch64_darwin;
         specialArgs = {
-          inherit inputs system;
-        };
+          inherit username usermail userfullname userbusinessmail;
+          pkgs = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+            overlays = [
+              nur.overlay
+              nixpkgs-firefox-darwin.overlay
+              nix-vscode-extensions.overlays.default
+            ];
+          };
+        } // inputs;
+
+        baseArgs = {inherit agenix nix-darwin home-manager system specialArgs nixpkgs;};
+      in
+      {
+        macdb = import ./hosts/macdb.nix baseArgs;
       };
-      formatter.aarch64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
+      formatter = nixpkgs.lib.genAttrs allSystems (
+          system: nixpkgs.legacyPackages.${system}.alejandra
+      );
     };
 }

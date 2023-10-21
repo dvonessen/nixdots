@@ -25,6 +25,7 @@
       "steam"
       "utm"
       "visual-studio-code"
+      "logi-options-plus"
     ];
     global.autoUpdate = false;
     onActivation = {
