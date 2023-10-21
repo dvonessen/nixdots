@@ -24,6 +24,7 @@
           home-manager.users.${username} = {
             imports = [
               ../home/common
+              ../home/darwin
             ];
           };
         }
