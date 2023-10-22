@@ -85,6 +85,7 @@
     ./nvim.nix
     ./git.nix
     ./awscli.nix
+    ./docker.nix
     ./k8s.nix
     ./firefox.nix
     ./vscode.nix

@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./autostart.nix
+    ./docker.nix
   ];
   # home.activation = {
   #   trampolineApps = let

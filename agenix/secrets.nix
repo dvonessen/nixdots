@@ -5,4 +5,5 @@ let
 in {
   "awscli-credentials.age".publicKeys = users;
   "ssh-clients-config.age".publicKeys = users;
+  "docker-config-json.age".publicKeys = users;
 }
