@@ -4,6 +4,7 @@
     compression = true;
     controlMaster = "auto";
     controlPersist = "yes";
+    controlPath = "~/.ssh/control/master-%r@%n:%p";
     forwardAgent = true;
     hashKnownHosts = false;
     serverAliveInterval = 10;
@@ -11,6 +12,12 @@
     includes = [
       config.age.secrets.ssh-clients-config.path
     ];
+  };
+
+  home.file."control" = {
+    enable = true;
+    target = ".ssh/control/.keep";
+    text = "";
   };
 
   age.secrets.ssh-clients-config = {
