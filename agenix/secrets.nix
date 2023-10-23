@@ -7,6 +7,11 @@ in {
   "awscli-credentials.age".publicKeys = users;
   # SSH client configuration
   "ssh-clients-config.age".publicKeys = users;
+  # SSH PrivateKeys
+  "dvonessen.age".publicKeys = users;
+  "dbsystel.age".publicKeys = users;
+  "argocd-yggdrasil-luzifer.xyz.age".publicKeys = users;
+  "ansible-server.vonessen.eu.age".publicKeys = users;
   # Docker client.json
   "docker-config-json.age".publicKeys = users;
   # WireGuard VPN configuration file
