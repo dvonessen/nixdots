@@ -12,7 +12,6 @@ in
     inherit system specialArgs;
     modules = [
       ../darwin
-      agenix.darwinModules.default
 
       # home manager
       home-manager.darwinModules.home-manager

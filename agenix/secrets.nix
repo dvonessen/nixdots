@@ -6,4 +6,7 @@ in {
   "awscli-credentials.age".publicKeys = users;
   "ssh-clients-config.age".publicKeys = users;
   "docker-config-json.age".publicKeys = users;
+  "wg-danielmacbook.age".publicKeys = users;
+  "wg-admin.age".publicKeys = users;
+  "wg-vpn.mobileconfig.age".publicKeys = users;
 }

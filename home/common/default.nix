@@ -80,6 +80,7 @@
     ./zsh.nix
     ./bash.nix
     ./coreutils.nix
+    ./wireguard.nix
     ./tmux.nix
     ./ssh-client.nix
     ./nvim.nix
