@@ -1,11 +1,13 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    argocd
     kube-linter
     kubectl
     kubectx
     kubernetes-helm
     kustomize
     minio-client
+    sops
     stern
     velero
   ];
