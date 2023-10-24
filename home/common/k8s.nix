@@ -1,9 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    kubernetes-helm
     kube-linter
-    kubectx
     kubectl
+    kubectx
+    kubernetes-helm
     kustomize
     minio-client
     stern
