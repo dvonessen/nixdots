@@ -90,5 +90,6 @@
     ./k8s.nix
     ./firefox.nix
     ./vscode.nix
+    ./ghorg.nix
   ];
 }

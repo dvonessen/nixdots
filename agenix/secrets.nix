@@ -18,4 +18,8 @@ in {
   "wg-danielmacbook.age".publicKeys = users;
   "wg-admin.age".publicKeys = users;
   "wg-vpn.mobileconfig.age".publicKeys = users;
+  # ghorg git api tokens
+  "ghorg-gitlab-com-token.age".publicKeys = users;
+  "ghorg-dbsystel-gitlab-token.age".publicKeys = users;
+  "ghorg-github-com-token.age".publicKeys = users;
 }
