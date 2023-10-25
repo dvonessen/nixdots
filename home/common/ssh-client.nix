@@ -1,4 +1,8 @@
-{config, username, ...}: {
+{
+  config,
+  username,
+  ...
+}: {
   programs.ssh = {
     enable = true;
     compression = true;
