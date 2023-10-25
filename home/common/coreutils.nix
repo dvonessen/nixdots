@@ -5,21 +5,43 @@
   ...
 }: {
   home.packages = with pkgs; [
-    gnutar
-    iperf
-    lego
+    bandwhich # Alternative bandwith monitor
+    btop # better top tool -> aliased to top
+    dig # DNS tools
+    erdtree # Rust tree alternative
+    fd # fast and simple find alternative
+    findutils
+    gnutar # GNU version of tar
+    htop
+    iftop # Bandwith monitor
+    inetutils # ping, traceroute, whois, etc
+    iperf # network performance tool
+    mtools # MS DOS tools
+    neofetch # system information tool
     netcat
-    nmap
-    p7zip
-    restic
-    sops
+    nmap # basic nmap but see also rustscan for a simpler tool
+    p7zip # 7zip
+    pigz # parallel gzip
+    restic # backup tool
+    rsync
+    rustscan # fast nmap alternative
+    smartmontools # S.M.A.R.T utility
+    sops # encryption tool
+    sshfs
     watch
     wget
-    yq-go
-    htop
-    btop
-    nixd
+    xz
+    yq-go # like yq/jq but better
+    yt-dlp # youtoube downloader
   ];
+
+  programs.zsh.shellAliases = {
+    top = "btop";
+  };
+
+  programs.bash.shellAliases = {
+    top = "btop";
+  };
 
   programs = {
     bat = {
