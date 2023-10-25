@@ -1,7 +1,8 @@
 # See https://github.com/ryantm/agenix#tutorial
 let
-  agenix = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJyOtbyOasyBrcr4PUsalys0QyVas6zz0n4UEl1np6Cg";
-  users = [agenix];
+  macdb = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJyOtbyOasyBrcr4PUsalys0QyVas6zz0n4UEl1np6Cg";
+  pandb = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBUUNRrdC8Wqw1v55tZ5c7bgFgglJWo7HU5p/CoF858+";
+  users = [macdb pandb];
 in {
   # AWS CLI credentials
   "awscli-credentials.age".publicKeys = users;
