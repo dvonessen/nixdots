@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     shellcheck # Used for shellcheck vscode extension
+    nixd # nix language server
   ];
 
   programs.vscode = {
