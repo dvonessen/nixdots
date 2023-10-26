@@ -240,6 +240,9 @@
       gitlab-dvonessen:
         cmd: "ghorg clone dvonessen --clone-type user --scm=gitlab --preserve-dir --token ${config.age.secrets.ghorg-gitlab-com-token.path} --output-dir gitlab.com/dvonessen"
         description: "Clones the dvonessen user repositories"
+      gitlab-gcix:
+        cmd: "ghorg clone gcix --scm=gitlab --preserve-dir --token ${config.age.secrets.ghorg-gitlab-com-token.path} --output-dir gitlab.com/gcix"
+        description: "Clones the dvonessen user repositories"
       gitlab-dbsystel:
         cmd: "ghorg clone dbsystel --scm=gitlab --preserve-dir --token ${config.age.secrets.ghorg-gitlab-com-token.path} --output-dir gitlab.com/dbsystel"
         description: "Clones the DB Systels GitLab group"
