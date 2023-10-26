@@ -30,7 +30,7 @@
       # See https://github.com/gabrie30/ghorg#changing-clone-directories for example
       # default: YOUR_HOME_DIR/ghorg
       # flag (--path, -p) eg: --path=/tmp/ghorg
-      GHORG_ABSOLUTE_PATH_TO_CLONE_TO: ${config.home.homeDirectory}/test_git
+      GHORG_ABSOLUTE_PATH_TO_CLONE_TO: ${config.home.homeDirectory}/git
 
       # Folder ghorg will clone all repos into. Cloning will result in: GHORG_ABSOLUTE_PATH_TO_CLONE_TO/GHORG_OUTPUT_DIR/repo
       # See https://github.com/gabrie30/ghorg#changing-clone-directories for example
