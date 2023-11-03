@@ -6,9 +6,6 @@
 }: {
   programs.firefox = {
     enable = true;
-    # Do not install Firefox in home-manager context,
-    # it gets installed by homebrew with nix-darwin.
-    package = null;
     profiles = {
       danielvonessen = {
         id = 0;
