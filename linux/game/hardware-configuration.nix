@@ -13,9 +13,13 @@
   ];
 
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod"];
-  boot.initrd.kernelModules = [];
+  boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
+
+  hardware.opengl.driSupport = true;
+  # For 32 bit applications
+  hardware.opengl.driSupport32Bit = true;
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/70f11282-29c1-46df-bc3b-6b7909fc81b6";
