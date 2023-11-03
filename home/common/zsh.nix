@@ -47,7 +47,7 @@
           owner = "zsh-users";
           repo = "zsh-syntax-highlighting";
           rev = "master";
-          sha256 = "TKGCck51qQ50dQGntKaeSk8waK3BlwUjueg4MImTH8k=";
+          sha256 = "bD0oKXSw9lucJR+6/O16m7prwA1cP36C0Tvh5mklapw=";
         };
       }
       {
@@ -56,7 +56,7 @@
           owner = "zsh-users";
           repo = "zsh-completions";
           rev = "master";
-          sha256 = "fJBdefFsxc+7kZ7ixnqwolv7pExmYVHrdPpfuzU9fwE=";
+          sha256 = "cxA+WH/dKk00s6HVN+w1sh/1skHvH4Ji+3rLSSNQGJU=";
         };
       }
       {

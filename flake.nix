@@ -46,15 +46,20 @@
     userfullname = "Daniel von Eßen";
     usermail = "daniel@vonessen.eu";
     userbusinessmail = "daniel.von-essen@deutschebahn.com";
+    userauthorizedkeys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICxOAvpTWpxTYInQ8pI/L84NsyPtj8K6E+bLgSGobzof daniel@vonessen.eu"
+    ];
 
+    x64_system = "x86_64-linux";
     aarch64_darwin = "aarch64-darwin";
-    allSystems = [aarch64_darwin];
+
+    allSystems = [aarch64_darwin x64_system];
   in {
     darwinConfigurations = let
       system = aarch64_darwin;
       specialArgs =
         {
-          inherit username usermail userfullname userbusinessmail;
+          inherit username usermail userfullname userbusinessmail userauthorizedkeys;
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
@@ -71,6 +76,27 @@
     in {
       macdb = import ./hosts/macdb.nix baseArgs;
     };
+
+    nixosConfigurations = let
+      system = x64_system;
+      specialArgs =
+        {
+          inherit username usermail userfullname userbusinessmail userauthorizedkeys;
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+            overlays = [
+              nur.overlay
+              nix-vscode-extensions.overlays.default
+            ];
+          };
+        }
+        // inputs;
+      baseArgs = {inherit agenix home-manager system specialArgs nixpkgs;};
+    in {
+      game = import ./hosts/game.nix baseArgs;
+    };
+
     formatter = nixpkgs.lib.genAttrs allSystems (
       system: nixpkgs.legacyPackages.${system}.alejandra
     );

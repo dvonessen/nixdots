@@ -11,6 +11,7 @@
   age.identityPaths = [
     "${config.home.homeDirectory}/.ssh/agenix@macdb.vonessen.eu"
     "${config.home.homeDirectory}/.ssh/agenix@pandb"
+    "${config.home.homeDirectory}/.ssh/agenix@game.vonessen.eu"
   ];
   # See https://github.com/ryantm/agenix#reference
 }
