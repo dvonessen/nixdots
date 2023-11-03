@@ -11,6 +11,7 @@ in
   nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
+      ../linux
       ../linux/game/configuration.nix
       home-manager.nixosModules.home-manager
       {
