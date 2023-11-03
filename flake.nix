@@ -4,9 +4,6 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs = {
-      url = "github:nixos/nixpkgs/23.05";
-    };
-    nixpkgs-unstable = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable";
     };
     nur = {
@@ -14,30 +11,29 @@
     };
     nix-darwin = {
       url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix = {
       url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-firefox-darwin = {
       url = "github:bandithedoge/nixpkgs-firefox-darwin";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     nur,
     nix-darwin,
     home-manager,
@@ -59,7 +55,7 @@
       specialArgs =
         {
           inherit username usermail userfullname userbusinessmail;
-          pkgs = import nixpkgs-unstable {
+          pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
             overlays = [
