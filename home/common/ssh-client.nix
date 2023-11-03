@@ -50,7 +50,7 @@
     };
     ansible = {
       file = ../../agenix/ansible-server.vonessen.eu.age;
-      path = "${config.home.homeDirectory}/.ssh/ansible@server.vonessen.eu.age";
+      path = "${config.home.homeDirectory}/.ssh/ansible@server.vonessen.eu";
       #owner = "${username}";
       mode = "600";
     };
