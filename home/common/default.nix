@@ -79,6 +79,7 @@
     ./xdg.nix
     ./zsh.nix
     ./bash.nix
+    ./wezterm.nix
     ./coreutils.nix
     ./wireguard.nix
     ./tmux.nix
