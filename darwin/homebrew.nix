@@ -14,17 +14,8 @@
       "caffeine"
       "docker"
       "ferdium"
-      "firefox"
-      "inkscape"
-      "keepassxc"
-      "libreoffice"
       "nextcloud"
       "onedrive"
-      "rectangle"
-      "spotify"
-      "steam"
-      "utm"
-      "visual-studio-code"
       "logi-options-plus"
     ];
     global.autoUpdate = false;

@@ -92,5 +92,6 @@
     ./firefox.nix
     ./vscode.nix
     ./ghorg.nix
+    ./applications.nix
   ];
 }
