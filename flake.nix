@@ -13,6 +13,10 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    mac-app-util = {
+      url = "github:hraban/mac-app-util";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,6 +40,7 @@
     nixpkgs,
     nur,
     nix-darwin,
+    mac-app-util,
     home-manager,
     agenix,
     nixpkgs-firefox-darwin,
@@ -72,7 +77,7 @@
         }
         // inputs;
 
-      baseArgs = {inherit agenix nix-darwin home-manager system specialArgs nixpkgs;};
+      baseArgs = {inherit agenix nix-darwin mac-app-util home-manager system specialArgs nixpkgs;};
     in {
       macdb = import ./hosts/macdb.nix baseArgs;
     };
