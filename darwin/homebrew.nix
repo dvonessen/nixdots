@@ -11,35 +11,35 @@
     casks = [
       {
         name = "amazon-workspaces";
-        greedy = true; 
+        greedy = true;
       }
-      { 
+      {
         name = "bitwarden";
-        greedy = true; 
+        greedy = true;
       }
       {
         name = "caffeine";
-        greedy = true; 
+        greedy = true;
       }
       {
         name = "docker";
-        greedy = true; 
+        greedy = true;
       }
-      { 
+      {
         name = "ferdium";
-        greedy = true; 
+        greedy = true;
       }
-      { 
+      {
         name = "logi-options-plus";
-        greedy = true; 
+        greedy = true;
       }
-      { 
+      {
         name = "nextcloud";
-        greedy = true; 
+        greedy = true;
       }
       {
         name = "onedrive";
-        greedy = true; 
+        greedy = true;
       }
     ];
     global.autoUpdate = false;
