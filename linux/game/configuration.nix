@@ -28,7 +28,6 @@
   networking = {
     hostName = "game";
     networkmanager.enable = true;
-
   };
 
   # Set your time zone.
@@ -68,12 +67,11 @@
       desktopManager.gnome.enable = true;
 
       # Exclude packages which gets installed as dependencies.
-      excludePackages = [ pkgs.xterm ];
+      excludePackages = [pkgs.xterm];
     };
 
     # Enable CUPS to print documents.
     printing.enable = true;
-
 
     # Enable the OpenSSH daemon.
     openssh.enable = true;
@@ -93,7 +91,6 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.defaultUserShell = pkgs.zsh;

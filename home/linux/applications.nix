@@ -1,6 +1,6 @@
 {pkgs, ...}: {
-    home.packages = with pkgs; [
-        bitwarden
-        libreoffice
-    ];
+  home.packages = with pkgs; [
+    bitwarden
+    libreoffice
+  ];
 }

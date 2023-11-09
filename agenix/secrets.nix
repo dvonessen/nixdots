@@ -2,7 +2,7 @@
 let
   macdb = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJyOtbyOasyBrcr4PUsalys0QyVas6zz0n4UEl1np6Cg";
   pandb = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBUUNRrdC8Wqw1v55tZ5c7bgFgglJWo7HU5p/CoF858+";
-  game  = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHYwHTBR7OpifQlwim9mKip+crIrlWvL8jN+eDB4DHCv";
+  game = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHYwHTBR7OpifQlwim9mKip+crIrlWvL8jN+eDB4DHCv";
   users = [macdb pandb game];
 in {
   # AWS CLI credentials
