@@ -24,4 +24,7 @@ in {
   "ghorg-gitlab-com-token.age".publicKeys = users;
   "ghorg-dbsystel-gitlab-token.age".publicKeys = users;
   "ghorg-github-com-token.age".publicKeys = users;
+  # bku sops credentials
+  "bku/credentials.env".publicKeys = users;
+  "bku/keyfile.txt".publicKeys = users;
 }

@@ -23,6 +23,7 @@ in
           imports = [
             ../home/common
             ../home/darwin
+            ../home/work
           ];
         };
       }
