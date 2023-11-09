@@ -81,6 +81,7 @@
     ./bash.nix
     ./wezterm.nix
     ./coreutils.nix
+    ./python.nix
     ./wireguard.nix
     ./tmux.nix
     ./ssh-client.nix
