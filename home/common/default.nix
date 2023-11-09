@@ -94,5 +94,6 @@
     ./vscode.nix
     ./ghorg.nix
     ./applications.nix
+    ./sops.nix
   ];
 }

@@ -27,4 +27,6 @@ in {
   # bku sops credentials
   "bku/credentials.env".publicKeys = users;
   "bku/keyfile.txt".publicKeys = users;
+  # SOPS keyfile
+  "sops-keys.txt".publicKeys = users;
 }
