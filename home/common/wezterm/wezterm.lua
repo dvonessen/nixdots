@@ -23,4 +23,5 @@ end
 return {
   scrollback_lines = 50000,
   color_scheme = scheme_for_appearance(get_appearance()),
+  font = wezterm.font('FiraCode Nerd Font', { weight = 450, italic = false })
 }
