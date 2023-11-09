@@ -20,8 +20,8 @@ in
         home-manager.extraSpecialArgs = specialArgs;
         home-manager.users.${username} = {
           imports = [
-          ../home/common
-          ../home/linux
+            ../home/common
+            ../home/linux
           ];
         };
       }

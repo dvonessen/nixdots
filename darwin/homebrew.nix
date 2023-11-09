@@ -9,14 +9,38 @@
       appdir = "~/Applications";
     };
     casks = [
-      "amazon-workspaces"
-      "bitwarden"
-      "caffeine"
-      "docker"
-      "ferdium"
-      "nextcloud"
-      "onedrive"
-      "logi-options-plus"
+      {
+        name = "amazon-workspaces";
+        greedy = true; 
+      }
+      { 
+        name = "bitwarden";
+        greedy = true; 
+      }
+      {
+        name = "caffeine";
+        greedy = true; 
+      }
+      {
+        name = "docker";
+        greedy = true; 
+      }
+      { 
+        name = "ferdium";
+        greedy = true; 
+      }
+      { 
+        name = "logi-options-plus";
+        greedy = true; 
+      }
+      { 
+        name = "nextcloud";
+        greedy = true; 
+      }
+      {
+        name = "onedrive";
+        greedy = true; 
+      }
     ];
     global.autoUpdate = false;
     onActivation = {
