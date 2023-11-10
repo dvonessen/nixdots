@@ -5,9 +5,19 @@
 }: {
   home.packages = with pkgs; [
     ghorg
+    gfold
   ];
 
-  xdg.configFile."conf.yaml" = {
+  xdg.configFile."gfold.toml" = {
+    enable = true;
+    target = "gfold.toml";
+    text = ''
+      display_mode = "Classic"
+      color_mode = "Always"
+    '';
+  };
+
+  xdg.configFile."ghorg/conf.yaml" = {
     enable = true;
     target = "ghorg/conf.yaml";
     text = ''
