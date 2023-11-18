@@ -9,7 +9,6 @@
 in {
   home.packages = with pkgs; [
     pipenv
-    python311WithPackages
   ]
   ++ python311WithPackages;
 
