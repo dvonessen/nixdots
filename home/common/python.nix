@@ -1,9 +1,17 @@
 {pkgs, ...}: let
+  python311WithPackages = with pkgs; [
+    (python311.withPackages (ps: with ps; [
+      ipython
+      pip
+      pyyaml
+    ]))
+  ];
 in {
   home.packages = with pkgs; [
-    python311
     pipenv
-  ];
+    python311WithPackages
+  ]
+  ++ python311WithPackages;
 
   programs.pyenv = {
     enable = true;
