@@ -82,6 +82,7 @@
     ./wezterm.nix
     ./coreutils.nix
     ./python.nix
+    ./nodejs.nix
     ./wireguard.nix
     ./tmux.nix
     ./ssh-client.nix
