@@ -99,7 +99,7 @@
         // inputs;
       baseArgs = {inherit agenix home-manager system specialArgs nixpkgs;};
     in {
-      game = import ./hosts/game.nix baseArgs;
+      game = import ./hosts/game baseArgs;
     };
 
     formatter = nixpkgs.lib.genAttrs allSystems (

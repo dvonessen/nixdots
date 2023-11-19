@@ -11,8 +11,8 @@ in
   nixpkgs.lib.nixosSystem {
     inherit system specialArgs;
     modules = [
-      ../linux
-      ../linux/game/configuration.nix
+      ./configuration.nix
+      ../../linux
       home-manager.nixosModules.home-manager
       {
         home-manager.useGlobalPkgs = true;
@@ -20,8 +20,8 @@ in
         home-manager.extraSpecialArgs = specialArgs;
         home-manager.users.${username} = {
           imports = [
-            ../home/common
-            ../home/linux
+            ../../home/common
+            ../../home/linux
           ];
         };
       }
