@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   services = {
+    # Bolt is used by GNOME 3 to handle Thunderbolt settings.
+    hardware.bolt.enable = true;
+
     # Enable the X11 windowing system.
     xserver = {
       enable = true;
