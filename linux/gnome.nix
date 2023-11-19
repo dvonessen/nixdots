@@ -18,8 +18,20 @@
       # Exclude packages which gets installed as dependencies.
       excludePackages = with pkgs; [
         xterm
-        gnome-console
       ];
     };
+
+    gnome = {
+      core-utilities.enable = false;
+      gnome-user-share.enable = false;
+      gnome-online-accounts.enable = false;
+      gnome-browser-connector.enable = false;
+      games.enable = false;
+    };
   };
+
+  environment.gnome.excludePackages = with pkgs;
+  [
+    gnome-tour
+  ];
 }
