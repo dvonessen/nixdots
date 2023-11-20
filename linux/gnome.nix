@@ -33,8 +33,7 @@
     };
   };
 
-  environment.gnome.excludePackages = with pkgs;
-  [
+  environment.gnome.excludePackages = with pkgs; [
     gnome-tour
   ];
 }
