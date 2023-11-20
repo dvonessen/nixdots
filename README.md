@@ -1,14 +1,12 @@
 # ToDo
 
-* Use encryption tool like sops to ensure encrypting some values.
 * Add awscli configuration to awscli.nix, but use bitwarden-cli to receive credentials.
 * Add script for bootstrapping nix and home-manager
-* Adding nix-darwin
-  * Configure Terminal Profile to use FiraCode NerdFont
 * Adding search providers to firefox
   * GitHub
   * GitLab
 * Add kube conf
+* Add gpgagent to handle ssh-keys
 
 ## Questions
 

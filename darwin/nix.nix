@@ -15,9 +15,6 @@
   # Follow the instance of this flakes nixpkgs
   nix.package = pkgs.nix;
 
-  # Enable nix-index and it's command-not-found helper
-  programs.nix-index.enable = true;
-
   # do garbage collection weekly to keep disk usage low
   nix.gc = {
     automatic = lib.mkDefault true;
