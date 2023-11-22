@@ -3,7 +3,6 @@
     "org/gnome/desktop/input-sources" = {
       sources = [
         (lib.hm.gvariant.mkTuple ["xkb" "de+mac_nodeadkeys"])
-        (lib.hm.gvariant.mkTuple ["xkb" "de+nodeadkeys"])
       ];
       # Allow rigth <ctrl> to trigger third keyboard level
       xkb-options = ["lv3:switch"];
