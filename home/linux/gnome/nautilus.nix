@@ -3,6 +3,11 @@
   lib,
   ...
 }: {
+  home.packages = with pkgs; [
+    gnome.nautilus
+    gnome.sushi
+  ];
+
   dconf.settings = {
     "org/gnome/nautilus/icon-view" = {
       captions = ["size" "date_modified" "detailed_type"];
