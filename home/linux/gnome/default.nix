@@ -4,5 +4,6 @@
     ./peripherals.nix
     ./nautilus.nix
     ./programs.nix
+    ./extensions.nix
   ];
 }

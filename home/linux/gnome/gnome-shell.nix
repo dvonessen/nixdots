@@ -31,7 +31,7 @@
       ];
     };
     "org/gnome/mutter" = {
-      edge-tiling = true;
+      edge-tiling = false; # Disable, using wintile extension
       workspaces-only-on-primary = true;
     };
     "org/gnome/desktop/session" = {
