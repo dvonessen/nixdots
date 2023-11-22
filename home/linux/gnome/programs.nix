@@ -7,6 +7,7 @@
     gnome.evince
     gnome.gnome-calculator
     amberol # Music player
+    celluloid # MPV video player
   ];
 
   dconf.settings = {
@@ -25,6 +26,13 @@
     # Configure Amberol music player
     "io/bassi/Amberol" = {
       background-play = false;
+    };
+    "io/github/celluloid-player/celluloid" = {
+      always-use-floating-controls = true;
+      csd-enable = true;
+      draggable-video-area-enable = true;
+      always-autohide-cursor = true;
+      always-append-to-playlist = true;
     };
   };
 }
