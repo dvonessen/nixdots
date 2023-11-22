@@ -1,7 +1,7 @@
 {lib, ...}: {
   dconf.settings = {
     "org/gnome/desktop/input-sources" = {
-      source = [
+      sources = [
         (lib.hm.gvariant.mkTuple ["xkb" "de+mac_nodeadkeys"])
         (lib.hm.gvariant.mkTuple ["xkb" "de+nodeadkeys"])
       ];
