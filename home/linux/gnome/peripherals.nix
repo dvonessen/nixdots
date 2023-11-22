@@ -23,5 +23,10 @@
       home = ["<Super>d"];
       search = ["<Super>space"];
     };
+    "org/gnome/desktop/peripherals/keyboard" = {
+      repeat = true;
+      repeat-interval = lib.hm.gvariant.mkUint32 15;
+      delay = lib.hm.gvariant.mkUint32 300;
+    };
   };
 }
