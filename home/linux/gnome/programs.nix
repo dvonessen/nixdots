@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [
+    gnome.file-roller
+  ];
+
   dconf.settings = {
     # Configure file-roller/Archive desktopManager
     "org/gnome/file-roller/ui" = {
