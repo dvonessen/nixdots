@@ -4,6 +4,7 @@
     gnome.gnome-tweaks
     gnome.file-roller
     gnome.eog
+    gnome.evince
   ];
 
   dconf.settings = {
