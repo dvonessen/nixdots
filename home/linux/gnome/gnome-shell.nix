@@ -1,7 +1,4 @@
-{
-  lib,
-  ...
-}: {
+{lib, ...}: {
   dconf.settings = {
     "system/locale" = {
       region = "de_DE.UTF-8";
