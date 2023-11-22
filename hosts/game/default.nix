@@ -22,7 +22,6 @@ in
           imports = [
             ../../home/common
             ../../home/linux
-            ../../home/linux/gnome
           ];
         };
       }
