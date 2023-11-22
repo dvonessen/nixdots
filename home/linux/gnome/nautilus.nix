@@ -3,11 +3,6 @@
   lib,
   ...
 }: {
-  home.packages = with pkgs; [
-    gnome.nautilus
-    gnome.sushi
-  ];
-
   dconf.settings = {
     "org/gnome/nautilus/icon-view" = {
       captions = ["size" "date_modified" "detailed_type"];
@@ -27,6 +22,10 @@
       recursive-search = "always";
       show-image-thumbnails = "always";
       show-directory-item-counts = "local-only";
+    };
+
+    "org/gnome/nautilus/compression" = {
+      default-compression-format = "zip";
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
