@@ -5,6 +5,8 @@
     gnome.file-roller
     gnome.eog
     gnome.evince
+    gnome.gnome-calculator
+    amberol # Music player
   ];
 
   dconf.settings = {
@@ -19,6 +21,10 @@
     "org/gnome/file-roller/listing" = {
       show-path = false;
       list-mode = "as-folder";
+    };
+    # Configure Amberol music player
+    "io/bassi/Amberol" = {
+      background-play = false;
     };
   };
 }
