@@ -3,6 +3,7 @@
     gnome.dconf-editor
     gnome.gnome-tweaks
     gnome.file-roller
+    gnome.eog
   ];
 
   dconf.settings = {
