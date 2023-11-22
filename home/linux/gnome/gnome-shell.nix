@@ -1,13 +1,7 @@
 {
-  pkgs,
   lib,
   ...
 }: {
-  home.packages = with pkgs; [
-    gnome.dconf-editor
-    gnome.gnome-tweaks
-  ];
-
   dconf.settings = {
     "system/locale" = {
       region = "de_DE.UTF-8";
