@@ -9,9 +9,11 @@
       clock-show-weekday = true;
       clock-show-date = true;
       clock-show-seconds = true;
-      show-weekdate = true;
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
+    };
+    "org/gnome/desktop/calendar" = {
+      show-weekdate = true;
     };
     "org/gnome/desktop/wm/preferences" = {
       action-double-click-titlebar = "toggle-maximize";
