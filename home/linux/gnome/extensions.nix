@@ -1,7 +1,8 @@
-{pkgs, ...}:{
+{pkgs, ...}: {
   home.packages = with pkgs.gnomeExtensions; [
     wintile-windows-10-window-tiling-for-gnome
     appindicator
+    bluetooth-quick-connect
   ];
 
   dconf.settings = {
@@ -10,6 +11,7 @@
       enabled-extensions = [
         "wintile@nowsci.com"
         "appindicatorsupport@rgcjonas.gmail.com"
+        "bluetooth-quick-connect@bjarosze.gmail.com"
       ];
     };
     # Configure wintile
@@ -24,6 +26,13 @@
     "org/gnome/shell/extensions/wintile" = {
       delay = 300;
       use-minimize = false;
+    };
+    # Bluetooth quick connect configuration
+    "org/gnome/shell/extensions/bluetooth-quick-connect" = {
+      keep-menu-on-toggle = true;
+      refresh-button-on = true;
+      show-battery-value-on = true;
+      show-battery-icon-on = true;
     };
   };
 }
