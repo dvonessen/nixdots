@@ -20,7 +20,6 @@
 
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "list-view";
-      migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
       show-delete-permanently = false;
       click-policy = "double";

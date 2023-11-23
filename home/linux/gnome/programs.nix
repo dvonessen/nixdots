@@ -27,6 +27,7 @@
     "io/bassi/Amberol" = {
       background-play = false;
     };
+    # Configure Celluloid video player
     "io/github/celluloid-player/celluloid" = {
       always-use-floating-controls = true;
       csd-enable = true;
