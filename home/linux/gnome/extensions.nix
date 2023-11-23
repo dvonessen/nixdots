@@ -3,6 +3,7 @@
     wintile-windows-10-window-tiling-for-gnome
     appindicator
     blur-my-shell
+    launch-new-instance
     bluetooth-quick-connect
     caffeine
   ];
@@ -16,6 +17,7 @@
         "bluetooth-quick-connect@bjarosze.gmail.com"
         "blur-my-shell@aunetx"
         "caffeine@patapon.info"
+        "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
       ];
     };
     # Configure wintile
