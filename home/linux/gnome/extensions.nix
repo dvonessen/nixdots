@@ -6,6 +6,7 @@
     launch-new-instance
     bluetooth-quick-connect
     caffeine
+    printers
   ];
 
   dconf.settings = {
@@ -18,6 +19,7 @@
         "blur-my-shell@aunetx"
         "caffeine@patapon.info"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
+        "printers@linux-man.org"
       ];
     };
     # Configure wintile
@@ -49,5 +51,13 @@
     "org/gnome/shell/extensions/blur-my-shell/overview".blur = true;
     "org/gnome/shell/extensions/blur-my-shell/panel".blur = true;
     "org/gnome/shell/extensions/blur-my-shell/applications".blur = false;
+    # Printer configuration
+    "org/gnome/shell/extensions/printers" = {
+      show-icon = "When printing";
+      show-jobs = true;
+      job-number = true;
+      send-to-front = true;
+      show-error = true;
+    };
   };
 }
