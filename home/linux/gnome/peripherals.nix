@@ -1,11 +1,11 @@
-{lib, ...}: {
+{lib, config, ...}: {
   dconf.settings = {
     "org/gnome/desktop/input-sources" = {
       sources = [
         (lib.hm.gvariant.mkTuple ["xkb" "de+mac_nodeadkeys"])
       ];
       # Allow rigth <ctrl> to trigger third keyboard level
-      xkb-options = ["lv3:switch"];
+      xkb-options = ["lv3:switch" "altwin:swap_alt_win"];
     };
     "org/gnome/desktop/peripherals/mouse" = {
       # Make mouse move in accelerated mode
@@ -35,7 +35,7 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Alt><Super>t";
-      command = "wezterm";
+      command = "wezterm --config-file=${config.home.homeDirectory}/.config/wezterm/wezterm.lua";
       name = "terminal";
     };
   };
