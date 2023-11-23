@@ -24,7 +24,7 @@
     };
     "org/gnome/desktop/peripherals/keyboard" = {
       repeat = true;
-      repeat-interval = lib.hm.gvariant.mkUint32 15;
+      repeat-interval = lib.hm.gvariant.mkUint32 18;
       delay = lib.hm.gvariant.mkUint32 300;
     };
     "org/gnome/desktop/wm/keybindings" = {
