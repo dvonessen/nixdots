@@ -19,8 +19,8 @@
 
     # Keyboard shortcuts
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      home = ["<Alt>d"];
-      search = ["<Alt>space"];
+      home = ["<Super>d"];
+      search = ["<Super>space"];
     };
     "org/gnome/desktop/peripherals/keyboard" = {
       repeat = true;
@@ -28,10 +28,12 @@
       delay = lib.hm.gvariant.mkUint32 300;
     };
     "org/gnome/desktop/wm/keybindings" = {
-      close = ["<Alt>q"];
-      switch-group = ["<Alt>less"];
-      switch-group-backward = ["<Shift><Alt>less"];
-      activate-window-menu = ["<Super>space"];
+      close = ["<Super>q"];
+      switch-group = ["<Super>less"];
+      switch-group-backward = ["<Shift><Super>less"];
+      activate-window-menu = ["<Alt>space"];
+      switch-input-source = [];
+      switch-input-source-backward = [];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Alt><Super>t";
