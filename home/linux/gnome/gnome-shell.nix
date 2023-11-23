@@ -35,6 +35,7 @@
     "org/gnome/mutter" = {
       edge-tiling = false; # Disable, using wintile extension
       workspaces-only-on-primary = true;
+      experimental-features = ["scale-monitor-framebuffer"];
     };
     "org/gnome/desktop/session" = {
       idle-delay = lib.hm.gvariant.mkUint32 900;
