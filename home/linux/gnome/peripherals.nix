@@ -38,5 +38,12 @@
       command = "wezterm --config-file=${config.home.homeDirectory}/.config/wezterm/wezterm.lua";
       name = "terminal";
     };
+      # Touchpad
+    "org/gnome/desktop/peripherals/touchpad" = {
+      natural-scroll = false;
+      speed = 0.30;
+      tap-to-click = true;
+      two-finger-scrolling-enabled = true;
+    };
   };
 }
