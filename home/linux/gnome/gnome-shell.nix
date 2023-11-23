@@ -42,11 +42,11 @@
       experimental-features = ["scale-monitor-framebuffer"];
     };
     "org/gnome/desktop/session" = {
-      idle-delay = lib.hm.gvariant.mkUint32 900;
+      idle-delay = lib.hm.gvariant.mkUint32 300;
     };
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "suspend";
-      sleep-inactive-ac-timeout = 1800;
+      sleep-inactive-ac-timeout = 900;
       power-button-action = "suspend";
     };
     "org/gnome/desktop/screensaver" = {
