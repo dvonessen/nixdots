@@ -2,6 +2,7 @@
   home.packages = with pkgs.gnomeExtensions; [
     wintile-windows-10-window-tiling-for-gnome
     appindicator
+    blur-my-shell
     bluetooth-quick-connect
   ];
 
@@ -12,6 +13,7 @@
         "wintile@nowsci.com"
         "appindicatorsupport@rgcjonas.gmail.com"
         "bluetooth-quick-connect@bjarosze.gmail.com"
+        "blur-my-shell@aunetx"
       ];
     };
     # Configure wintile
@@ -34,5 +36,14 @@
       show-battery-value-on = true;
       show-battery-icon-on = true;
     };
+    # Blur my shell configuration
+    "org/gnome/shell/extensions/blur-my-shell" = {
+      sigma = 10;
+      brightness = 0.60;
+      noise-amount = 0.20;
+    };
+    "org/gnome/shell/extensions/blur-my-shell/overview".blur = true;
+    "org/gnome/shell/extensions/blur-my-shell/panel".blur = true;
+    "org/gnome/shell/extensions/blur-my-shell/applications".blur = false;
   };
 }
