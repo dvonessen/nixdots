@@ -1,6 +1,7 @@
 {pkgs, ...}:{
-  home.packages = with pkgs; [
-    gnomeExtensions.wintile-windows-10-window-tiling-for-gnome
+  home.packages = with pkgs.gnomeExtensions; [
+    wintile-windows-10-window-tiling-for-gnome
+    appindicator
   ];
 
   dconf.settings = {
@@ -8,6 +9,7 @@
     "org/gnome/shell" = {
       enabled-extensions = [
         "wintile@nowsci.com"
+        "appindicatorsupport@rgcjonas.gmail.com"
       ];
     };
     # Configure wintile
