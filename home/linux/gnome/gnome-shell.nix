@@ -6,11 +6,15 @@
     "org/gnome/desktop/interface" = {
       # Use middle button from mouse to paste
       gtk-enable-primary-paste = true;
+      clock-format = "24h";
       clock-show-weekday = true;
       clock-show-date = true;
       clock-show-seconds = true;
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
+      show-battery-percentage = true;
+      toolbar-icons-size = "large";
+      toolkit-accessibility = false;
     };
     "org/gnome/desktop/calendar" = {
       show-weekdate = true;
