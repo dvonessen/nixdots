@@ -4,6 +4,7 @@
     appindicator
     blur-my-shell
     bluetooth-quick-connect
+    caffeine
   ];
 
   dconf.settings = {
@@ -14,6 +15,7 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "bluetooth-quick-connect@bjarosze.gmail.com"
         "blur-my-shell@aunetx"
+        "caffeine@patapon.info"
       ];
     };
     # Configure wintile
