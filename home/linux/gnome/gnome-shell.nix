@@ -47,7 +47,9 @@
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "suspend";
       sleep-inactive-ac-timeout = 900;
+      sleep-inactive-battery-timeout = 300;
       power-button-action = "suspend";
+      ambient-enabled = false;
     };
     "org/gnome/desktop/screensaver" = {
       # Immediately locking when screen turns off
