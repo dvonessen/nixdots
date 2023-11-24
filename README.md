@@ -8,6 +8,7 @@
 * Adding search providers to firefox
   * GitHub
   * GitLab
+* Add kube conf
 
 ## Questions
 
