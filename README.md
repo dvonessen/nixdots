@@ -63,3 +63,11 @@ The applications do have to be manually added to the Login Items.
 
 * LogiOptions+
 * WireGuard
+
+## Darwin
+
+Possible configurations on MacOS from `defaults`
+
+* com.apple.Spotlight
+* com.apple.print.*
+* com.knollsoft.Rectangle
