@@ -38,6 +38,13 @@
           user.email = userbusinessmail;
           user.name = userfullname;
         };
+        condition = "gitdir:~/git/git.tech.rz.db.de/**";
+      }
+      {
+        contents = {
+          user.email = userbusinessmail;
+          user.name = userfullname;
+        };
         condition = "gitdir:~/git/gitlab/dbsystel/**";
       }
     ];
