@@ -19,6 +19,5 @@
   imports = [
     ./applications.nix
     ./autostart.nix
-    ./docker.nix
   ];
 }
