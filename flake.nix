@@ -33,6 +33,10 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcasks = {
+      url = "github:jacekszymanski/nixcasks";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -73,6 +77,9 @@
               nixpkgs-firefox-darwin.overlay
               nix-vscode-extensions.overlays.default
             ];
+            config.packageOverrides = _: {
+              nixcasks = inputs.nixcasks.legacyPackages."${system}";
+            };
           };
         }
         // inputs;

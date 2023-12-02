@@ -234,6 +234,26 @@
         "type": "github"
       }
     },
+    "nixcasks": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1701293935,
+        "narHash": "sha256-wzxm/rGr6g7yU1fHlVaY1hstvzXvDeSGoaWLaqOVQlA=",
+        "owner": "jacekszymanski",
+        "repo": "nixcasks",
+        "rev": "4fcf9cc1124a41b1a4b8a1db05a726a810781cf1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jacekszymanski",
+        "repo": "nixcasks",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1700108881,
@@ -292,6 +312,7 @@
         "mac-app-util": "mac-app-util",
         "nix-darwin": "nix-darwin",
         "nix-vscode-extensions": "nix-vscode-extensions",
+        "nixcasks": "nixcasks",
         "nixpkgs": "nixpkgs",
         "nixpkgs-firefox-darwin": "nixpkgs-firefox-darwin",
         "nur": "nur"

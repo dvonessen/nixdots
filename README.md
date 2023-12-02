@@ -47,6 +47,7 @@
 There is not easy option to create Login Items in macOS.
 The applications do have to be manually added to the Login Items.
 `System Settings -> General -> Login Items -> Open at Login`
+
 * Bitwarden
 * Caffeine
 * Calendar
