@@ -95,7 +95,8 @@
         TrackpadRightClick = true;
         TrackpadThreeFingerDrag = false;
       };
-      universalaccess.reduceTransparency = true;
+      # TODO: https://github.com/LnL7/nix-darwin/issues/705
+      # universalaccess.reduceTransparency = true;
 
       CustomUserPreferences = {
         "com.apple.finder"._FXSortFoldersFirst = true;
@@ -111,6 +112,16 @@
         "com.apple.ImageCapture".disableHotPlug = true;
       };
 
+    };
+  };
+  launchd.agents.ThunderbirdEnv = {
+    serviceConfig = {
+      ProgramArguments = [
+        "/bin/sh"
+        "-c"
+        "launchctl setenv MOZ_LEGACY_PROFILES 1; launchctl setenv MOZ_ALLOW_DOWNGRADE 1"
+      ];
+      RunAtLoad = true;
     };
   };
 }
