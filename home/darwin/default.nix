@@ -20,4 +20,7 @@
     ./applications.nix
     ./autostart.nix
   ];
+  home.packages = with pkgs.pkgsx86_64Darwin; [
+    caffeine
+  ];
 }

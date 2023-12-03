@@ -18,10 +18,6 @@
         greedy = true;
       }
       {
-        name = "caffeine";
-        greedy = true;
-      }
-      {
         name = "docker";
         greedy = true;
       }
