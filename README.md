@@ -1,4 +1,12 @@
-# ToDo
+# Readme
+
+# Installation
+
+1. Install `brew` from [brew.sh](brew.sh)
+2. Instal nix from [https://nixos.org/download](https://nixos.org/download)
+   1. Maybe [nix-homebrew](https://github.com/zhaofengli/nix-homebrew) will help?
+
+## ToDo
 
 * Add awscli configuration to awscli.nix, but use bitwarden-cli to receive credentials.
 * Add script for bootstrapping nix and home-manager

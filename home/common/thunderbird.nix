@@ -34,7 +34,10 @@ in {
     enable = true;
     package =
       if pkgs.stdenv.isDarwin
-      then pkgs.nixcasks.thunderbird
+      then pkgs.runCommand "thunderbird-dummy" {} ''
+        mkdir $out
+        echo "This is a dummy" > $out/dummy.txt
+        ''
       else pkgs.thunderbird;
     profiles."${defaultMailProfile}".isDefault = true;
     # This option disables the warning:
