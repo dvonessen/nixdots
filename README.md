@@ -1,6 +1,6 @@
 # Readme
 
-# Installation
+## Installation
 
 1. Install `brew` from [brew.sh](brew.sh)
 2. Instal nix from [https://nixos.org/download](https://nixos.org/download)
