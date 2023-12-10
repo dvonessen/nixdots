@@ -87,6 +87,7 @@
     ./tmux.nix
     ./ssh-client.nix
     ./nvim.nix
+    ./lf.nix
     ./git.nix
     ./awscli.nix
     ./docker.nix
