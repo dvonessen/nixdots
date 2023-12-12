@@ -37,11 +37,13 @@
   ];
 
   programs.zsh.shellAliases = {
-    top = "btop";
+    top = "${pkgs.btop}/bin/btop";
+    man = "${pkgs.bat-extras.batman}/bin/batman";
   };
 
   programs.bash.shellAliases = {
-    top = "btop";
+    top = "${pkgs.btop}/bin/btop";
+    man = "${pkgs.bat-extras.batman}/bin/batman";
   };
 
   home.file."fzf-preview.sh" = {
@@ -57,6 +59,9 @@
       config = {
         color = "always";
       };
+      extraPackages = with pkgs.bat-extras; [
+        batman
+      ];
     };
 
     eza = {
