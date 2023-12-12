@@ -56,13 +56,6 @@ if command -v mcfly &> /dev/null ; then
     export MCFLY_RESULTS=50
 fi
 
-if command -v fuck &> /dev/null; then
-    # Exclude fix_file rule, fuck will prefix each
-    # autocorrection with vim FILENAME && command
-    # See https://github.com/nvbn/thefuck/issues/1153
-    export THEFUCK_EXCLUDE_RULES=fix_file
-fi
-
 if [ -x /opt/homebrew/bin/brew ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 elif [ -x /usr/local/bin/brew ]; then
