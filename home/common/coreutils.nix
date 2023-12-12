@@ -33,6 +33,7 @@
     xz
     yq-go # like yq/jq but better
     yt-dlp # youtoube downloader
+    chafa # Image previewer for fzf
   ];
 
   programs.zsh.shellAliases = {
@@ -42,6 +43,13 @@
   programs.bash.shellAliases = {
     top = "btop";
   };
+
+  home.file."fzf-preview.sh" = {
+      enable = true;
+      executable = true;
+      target = ".local/bin/fzf-preview.sh";
+      source = ./lib/fzf-preview.sh;
+    };
 
   programs = {
     bat = {
@@ -68,6 +76,13 @@
       enable = true;
       enableBashIntegration = true;
       enableZshIntegration = true;
+      defaultCommand = "${pkgs.fd}/bin/fd --type f";
+      defaultOptions = [
+        "--preview '${config.home.homeDirectory}/${config.home.file."fzf-preview.sh".target} {}'"
+        "--cycle"
+        "--border=bold"
+
+      ];
     };
 
     htop = {
