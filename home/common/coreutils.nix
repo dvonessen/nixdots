@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     bandwhich # Alternative bandwith monitor
     btop # better top tool -> aliased to top
+    coreutils # GNU Core Utilities
     dig # DNS tools
     erdtree # Rust tree alternative
     fd # fast and simple find alternative
@@ -33,7 +34,6 @@
     xz
     yq-go # like yq/jq but better
     yt-dlp # youtoube downloader
-    chafa # Image previewer for fzf
   ];
 
   programs.zsh.shellAliases = {
@@ -45,13 +45,6 @@
     top = "${pkgs.btop}/bin/btop";
     man = "${pkgs.bat-extras.batman}/bin/batman";
   };
-
-  home.file."fzf-preview.sh" = {
-      enable = true;
-      executable = true;
-      target = ".local/bin/fzf-preview.sh";
-      source = ./lib/fzf-preview.sh;
-    };
 
   programs = {
     bat = {
@@ -74,19 +67,6 @@
         "--header"
         "--mounts"
         "--git"
-      ];
-    };
-
-    fzf = {
-      enable = true;
-      enableBashIntegration = true;
-      enableZshIntegration = true;
-      defaultCommand = "${pkgs.fd}/bin/fd --type f";
-      defaultOptions = [
-        "--preview '${config.home.homeDirectory}/${config.home.file."fzf-preview.sh".target} {}'"
-        "--cycle"
-        "--border=bold"
-
       ];
     };
 
