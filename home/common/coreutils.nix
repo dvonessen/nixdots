@@ -9,7 +9,6 @@
     btop # better top tool -> aliased to top
     coreutils # GNU Core Utilities
     dig # DNS tools
-    erdtree # Rust tree alternative
     fd # fast and simple find alternative
     findutils
     gnutar # GNU version of tar
@@ -39,11 +38,13 @@
   programs.zsh.shellAliases = {
     top = "${pkgs.btop}/bin/btop";
     man = "${pkgs.bat-extras.batman}/bin/batman";
+    tree = "${pkgs.eza} --tree";
   };
 
   programs.bash.shellAliases = {
     top = "${pkgs.btop}/bin/btop";
     man = "${pkgs.bat-extras.batman}/bin/batman";
+    tree = "${pkgs.eza} --tree";
   };
 
   programs = {
