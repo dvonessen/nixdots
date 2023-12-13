@@ -11,24 +11,20 @@ PREVIEW_LINES=${3:-${FZF_PREVIEW_LINES}}
 CACHE="$HOME/.cache/lf/thumbnail.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' \
   -- "$(readlink -f "${FILENAME}")" | sha256sum | awk '{print $1}')"
 
-
-
-if [ -n "${FZF_PREVIEW_COLUMNS}" ]; then
-  if [ ${FZF_PREVIEW_COLUMNS} -gt 80 ]; then
+image() {
+  # Limit max size of file to 80x50
+  # This prevents CPU exhausting
+  if [ "${2}" -gt 80 ]; then
     PREVIEW_COLUMNS=80
   else
-    PREVIEW_COLUMNS=${FZF_PREVIEW_COLUMNS}
+    PREVIEW_COLUMNS=${2}
   fi
-  if [ ${FZF_PREVIEW_LINES} -gt 50 ]; then
+  if [ "${3}" -gt 50 ]; then
     PREVIEW_LINES=50
   else
-    PREVIEW_LINES=${FZF_PREVIEW_LINES}
+    PREVIEW_LINES=${3}
   fi
-fi
-
-image() {
-  geometry="$((${2}-2))x${3}"
-	chafa -f sixel -s "${geometry}" --animate off --polite on "${1}"
+	chafa -f sixel -s "${PREVIEW_COLUMNS}x${PREVIEW_LINES}" --animate off --polite on "${1}"
 }
 
 
