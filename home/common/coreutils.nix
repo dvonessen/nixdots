@@ -33,6 +33,7 @@
     xz
     yq-go # like yq/jq but better
     yt-dlp # youtoube downloader
+    trash-cli # Toss files/folders into the xdg trash
   ];
 
   programs.zsh.shellAliases = {

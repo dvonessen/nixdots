@@ -33,6 +33,7 @@
     imagemagick
     coreutils
     chafa
+    trash-cli # Toss files/folders into the xdg trash
   ];
 
   programs = {
