@@ -38,13 +38,13 @@
   programs.zsh.shellAliases = {
     top = "${pkgs.btop}/bin/btop";
     man = "${pkgs.bat-extras.batman}/bin/batman";
-    tree = "${pkgs.eza} --tree";
+    tree = "${pkgs.eza}/bin/eza --tree";
   };
 
   programs.bash.shellAliases = {
     top = "${pkgs.btop}/bin/btop";
     man = "${pkgs.bat-extras.batman}/bin/batman";
-    tree = "${pkgs.eza} --tree";
+    tree = "${pkgs.eza}/bin/eza --tree";
   };
 
   programs = {
