@@ -73,30 +73,15 @@
 
   imports = [
     agenix.homeManagerModules.default
-    ./home-secrets.nix
+    ./bash.nix
+    ./coreutils.nix
     ./home-manager.nix
+    ./home-secrets.nix
+    ./k8s.nix
+    ./lf-fzf.nix
     ./nixpkgs.nix
+    ./nvim.nix
     ./xdg.nix
     ./zsh.nix
-    ./bash.nix
-    ./wezterm.nix
-    ./coreutils.nix
-    ./python.nix
-    ./nodejs.nix
-    ./wireguard.nix
-    ./tmux.nix
-    ./ssh-client.nix
-    ./nvim.nix
-    ./lf-fzf.nix
-    ./git.nix
-    ./awscli.nix
-    ./docker.nix
-    ./k8s.nix
-    ./firefox.nix
-    ./vscode.nix
-    ./ghorg.nix
-    ./applications.nix
-    ./sops.nix
-    ./thunderbird.nix
   ];
 }

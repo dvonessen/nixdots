@@ -22,6 +22,7 @@ in
           imports = [
             ../../home/common
             ../../home/linux
+            ../../home/workstations
           ];
         };
       }

@@ -22,6 +22,7 @@ in
         home-manager.users.${username} = {
           imports = [
             ../home/common
+            ../home/workstations
             ../home/darwin
             ../home/work
           ];

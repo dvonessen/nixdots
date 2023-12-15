@@ -34,10 +34,6 @@
         greedy = true;
       }
       {
-        name = "thunderbird";
-        greedy = true;
-      }
-      {
         name = "onedrive";
         greedy = true;
       }

@@ -4,5 +4,6 @@
     rectangle
     utm
     libreoffice-bin
+    pkgsx86_64Darwin.caffeine
   ];
 }
