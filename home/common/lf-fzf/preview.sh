@@ -4,7 +4,21 @@
 # Reference: https://github.com/thimc/lfimg
 
 # Modified by: Me
-FILENAME=${1}
+if [ -f "$1" ]; then
+  FILENAME="$1"
+elif [ "$lf_trash_restore" ]; then
+  if [ -f "$HOME/.local/share/Trash/files/$(basename "$(printf "%s" "${1}" | awk '{print $4}')")" ]; then
+    FILENAME="$HOME/.local/share/Trash/files/$(basename "$(printf "%s" "${1}" | awk '{print $4}')")"
+  fi
+elif [ -n "$f" ] && [ -f "$(dirname "$f")/$(printf "%s" "$1" | awk -F ":" '{print $1}')" ]; then
+  FILENAME="$(dirname "$f")/$(printf "%s" "$1" | awk -F ":" '{print $1}')"
+fi
+
+if [ -z "$FILENAME" ]; then
+  echo "NO PREVIEW FILE AVAILABLE!"
+  exit 0
+fi
+
 PREVIEW_COLUMNS=${2:-${FZF_PREVIEW_COLUMNS}}
 PREVIEW_LINES=${3:-${FZF_PREVIEW_LINES}}
 
@@ -66,7 +80,7 @@ case "$(printf "%s\n" "$(readlink -f "${FILENAME}")" | awk '{print tolower($0)}'
     [ ! -f "$CACHE" ] && comicthumb "${FILENAME}" "$CACHE" 1024
     image "$CACHE" "${PREVIEW_COLUMNS}" "${PREVIEW_LINES}" "$4" "$5"
     ;;
-  *.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.fl[icv]|*.m2v|*.mov|*.webm|*.ts|*.mts|*.m4v|*.r[am]|*.qt|*.divx)
+  *.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.fl[icv]|*.m2v|*.mov|*.webm|*.mts|*.m4v|*.r[am]|*.qt|*.divx)
     [ ! -f "${CACHE}.jpg" ] && \
       ffmpegthumbnailer -i "${FILENAME}" -o "${CACHE}.jpg" -s 0 -q 5
     image "${CACHE}.jpg" "${PREVIEW_COLUMNS}" "${PREVIEW_LINES}" "$4" "$5"
