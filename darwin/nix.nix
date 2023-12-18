@@ -4,7 +4,14 @@
   ...
 }: {
   # enable flakes globally
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
+    # Manual optimise storage: nix-store --optimise
+    # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
+    auto-optimise-store = true;
+    # Disable: warning: Git tree 'PATH' is dirty
+    warn-dirty = false;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -20,8 +27,4 @@
     automatic = lib.mkDefault true;
     options = lib.mkDefault "--delete-older-than 1w";
   };
-
-  # Manual optimise storage: nix-store --optimise
-  # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
-  nix.settings.auto-optimise-store = true;
 }
