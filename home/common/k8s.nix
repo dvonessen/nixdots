@@ -10,6 +10,7 @@
     sops
     stern
     velero
+    dive
   ];
 
   programs.k9s = {
