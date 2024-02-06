@@ -11,15 +11,15 @@
     stern
     velero
     dive
+    authelia
   ];
 
   programs.k9s = {
     enable = true;
-    # Commented until: https://github.com/derailed/k9s/issues/2346
-    # settings = {
-    #   k9s = {
-    #     enableMouse = true;
-    #   };
-    # };
+    settings = {
+      k9s = {
+        enableMouse = true;
+      };
+    };
   };
 }

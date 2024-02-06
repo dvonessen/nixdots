@@ -11,6 +11,7 @@
     dig # DNS tools
     fd # fast and simple find alternative
     findutils
+    glow # CLI Markdown Reader
     gnutar # GNU version of tar
     htop
     iftop # Bandwith monitor
@@ -27,6 +28,7 @@
     rustscan # fast nmap alternative
     smartmontools # S.M.A.R.T utility
     sops # encryption tool
+    sd # Search and displace "better sed"
     sshfs
     watch
     wget
