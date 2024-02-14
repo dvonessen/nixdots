@@ -1,4 +1,8 @@
-{lib, config, ...}: {
+{
+  lib,
+  config,
+  ...
+}: {
   dconf.settings = {
     "org/gnome/desktop/input-sources" = {
       sources = [
@@ -40,7 +44,7 @@
       command = "wezterm --config-file=${config.home.homeDirectory}/.config/wezterm/wezterm.lua";
       name = "terminal";
     };
-      # Touchpad
+    # Touchpad
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false;
       speed = 0.30;

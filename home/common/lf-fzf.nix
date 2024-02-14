@@ -1,4 +1,8 @@
-{pkgs, config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.file = {
     lf-fzf-preview = {
       enable = true;
@@ -235,7 +239,7 @@
             fi
           }}
         '';
-         trashList = ''
+        trashList = ''
           !{{
             clear
             trashed_files=$(trash-list)
@@ -332,34 +336,34 @@
         # Mappings to custom commands #
         # # # # # # # # # # # # # # # #
         "<enter>" = "open";
-        e     = "open";
-        o     = "open";
-        md    = "mkdir";
-        mf    = "mkfile";
-        ch    = "chmod";
-        R     = "bulkrename";
-        mr    = "bulkrename";
-        gt    = "push :zoxide<space>";
+        e = "open";
+        o = "open";
+        md = "mkdir";
+        mf = "mkfile";
+        ch = "chmod";
+        R = "bulkrename";
+        mr = "bulkrename";
+        gt = "push :zoxide<space>";
         # Invoke zoxide -i to use fuzzy searching through it database
-        gi    = "zoxidei";
-        fj    = "fzfJump";
+        gi = "zoxidei";
+        fj = "fzfJump";
         "'\"'" = ":fzfSearch";
         "<c-f>" = ":fzfSearch";
-        fs    = ":fzfSearch";
-        ax    = "extractArchive";
-        ac    = "push :createArchive<space>";
+        fs = ":fzfSearch";
+        ax = "extractArchive";
+        ac = "push :createArchive<space>";
         # Trash-ClI bindings
         # trash items
-        td    = "trashPut";
-        dd    = "trashPut";
+        td = "trashPut";
+        dd = "trashPut";
         # Undo trashed items
-        uu    = "trashRestore";
-        tr    = "trashRestore";
-        te    = "trashEmpty";
-        tl    = "trashList";
+        uu = "trashRestore";
+        tr = "trashRestore";
+        te = "trashEmpty";
+        tl = "trashList";
         # Convert link to file
-        dl    = "linkToFile";
-        zp    = "togglePreview";
+        dl = "linkToFile";
+        zp = "togglePreview";
       };
       extraConfig = ''
         $mkdir -p ${config.xdg.cacheHome}/lf

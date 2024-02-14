@@ -1,8 +1,14 @@
-{pkgs, nixcasks, usermail, userfullname, ...}: let
+{
+  pkgs,
+  nixcasks,
+  usermail,
+  userfullname,
+  ...
+}: let
   defaultMailProfile = "mailbox-org";
 in {
   accounts = {
-      email.accounts."${defaultMailProfile}" = {
+    email.accounts."${defaultMailProfile}" = {
       primary = true;
       address = usermail;
       userName = usermail;
@@ -34,9 +40,10 @@ in {
     enable = true;
     package =
       if pkgs.stdenv.isDarwin
-      then pkgs.runCommand "thunderbird-dummy" {} ''
-        mkdir $out
-        echo "This is a dummy" > $out/dummy.txt
+      then
+        pkgs.runCommand "thunderbird-dummy" {} ''
+          mkdir $out
+          echo "This is a dummy" > $out/dummy.txt
         ''
       else pkgs.thunderbird;
     profiles."${defaultMailProfile}".isDefault = true;
@@ -87,7 +94,7 @@ in {
     };
   };
   home.sessionVariables = {
-    MOZ_LEGACY_PROFILES=1;
-    MOZ_ALLOW_DOWNGRADE=1;
+    MOZ_LEGACY_PROFILES = 1;
+    MOZ_ALLOW_DOWNGRADE = 1;
   };
 }
