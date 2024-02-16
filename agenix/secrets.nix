@@ -7,6 +7,7 @@ let
 in {
   # AWS CLI credentials
   "awscli-credentials.age".publicKeys = users;
+  "awscli-config.age".publicKeys = users;
   # SSH client configuration
   "ssh-clients-config.age".publicKeys = users;
   # SSH PrivateKeys

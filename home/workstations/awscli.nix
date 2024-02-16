@@ -5,22 +5,16 @@
   ...
 }: {
   home.packages = with pkgs; [
-    awscli
+    awscli2
   ];
-  home.file = {
-    awscli-config = {
-      text = ''
-        [default]
-        output=json
-        region=eu-central-1
-      '';
-      target = "./.aws/config";
-    };
-  };
   age.secrets = {
     "awscli-credentials" = {
       file = ../../agenix/awscli-credentials.age;
       path = "${config.home.homeDirectory}/.aws/credentials";
+    };
+    "awscli-config" = {
+      file = ../../agenix/awscli-config.age;
+      path = "${config.home.homeDirectory}/.aws/config";
     };
   };
 }
