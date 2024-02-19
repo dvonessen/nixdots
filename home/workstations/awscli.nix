@@ -7,6 +7,14 @@
   home.packages = with pkgs; [
     awscli2
   ];
+
+  programs.bash.initExtra = ''
+    source ${pkgs.awscli2}/share/bash-completion/completions/aws.bash
+  '';
+  programs.zsh.initExtra = ''
+    source ${pkgs.awscli2}/share/zsh/site-functions/_aws
+  '';
+
   age.secrets = {
     "awscli-credentials" = {
       file = ../../agenix/awscli-credentials.age;
