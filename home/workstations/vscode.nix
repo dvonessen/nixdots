@@ -8,6 +8,7 @@
     enable = true;
     extensions = with pkgs.vscode-marketplace; [
       alefragnani.project-manager
+      charliermarsh.ruff
       christian-kohler.path-intellisense
       davidanson.vscode-markdownlint
       donjayamanne.githistory
@@ -199,6 +200,21 @@
       "git.suggestSmartCommit" = "false";
       "hediet.vscode-drawio.resizeImages" = "null";
       "gitlens.rebaseEditor.ordering" = "asc";
+      "ruff.enable" = "true";
+      "ruff.fixAll" = "true";
+      "[python]" = {
+        "editor.formatOnSave" = "true";
+        "editor.defaultFormatter" = "charliermarsh.ruff";
+        "editor.codeActionsOnSave" = {
+          "source.fixAll" = "true";
+          "source.organizeImports" = "true";
+        };
+      };
+      "notebook.formatOnSave.enabled" = "true";
+      "notebook.codeActionsOnSave" = {
+        "notebook.source.fixAll" = "true";
+        "notebook.source.organizeImports" = "true";
+      };
     };
   };
 }
