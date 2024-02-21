@@ -5,14 +5,12 @@
         ipython
         pip
         pyyaml
-        pdm
       ]))
   ];
 in {
   home.packages = with pkgs;
     [
       pipenv
-      pdm
       rye
     ]
     ++ python311WithPackages;
@@ -29,10 +27,4 @@ in {
     fi
     source ${pkgs.rye}/share/zsh/site-functions/_rye
   '';
-
-  programs.pyenv = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
 }
