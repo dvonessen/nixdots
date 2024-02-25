@@ -8,8 +8,8 @@
       enable = true;
 
       # Configure keymap in X11
-      layout = "de";
-      xkbVariant = "mac_nodeadkeys";
+      xkb.variant = "mac_nodeadkeys";
+      xkb.layout = "de";
 
       # Enable the GNOME Desktop Environment.
       displayManager.gdm = {
