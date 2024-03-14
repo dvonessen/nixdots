@@ -1,6 +1,7 @@
 {
   userfullname,
   usermail,
+  userfullbusinessname,
   userbusinessmail,
   ...
 }: {
@@ -29,21 +30,21 @@
       {
         contents = {
           user.email = userbusinessmail;
-          user.name = userfullname;
+          user.name = userfullbusinessname;
         };
         condition = "gitdir:~/git/dbsystel/**";
       }
       {
         contents = {
           user.email = userbusinessmail;
-          user.name = userfullname;
+          user.name = userfullbusinessname;
         };
         condition = "gitdir:~/git/git.tech.rz.db.de/**";
       }
       {
         contents = {
           user.email = userbusinessmail;
-          user.name = userfullname;
+          user.name = userfullbusinessname;
         };
         condition = "gitdir:~/git/gitlab/dbsystel/**";
       }

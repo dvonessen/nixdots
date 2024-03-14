@@ -55,6 +55,7 @@
     userfullname = "Daniel von Eßen";
     usermail = "daniel@vonessen.eu";
     userbusinessmail = "daniel.von-essen@deutschebahn.com";
+    userfullbusinessname = "Daniel von-Eßen";
     userauthorizedkeys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICxOAvpTWpxTYInQ8pI/L84NsyPtj8K6E+bLgSGobzof daniel@vonessen.eu"
     ];
@@ -68,7 +69,7 @@
       system = aarch64_darwin;
       specialArgs =
         {
-          inherit username usermail userfullname userbusinessmail userauthorizedkeys;
+          inherit username usermail userfullname userbusinessmail userfullbusinessname userauthorizedkeys;
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
@@ -93,7 +94,7 @@
       system = x64_system;
       specialArgs =
         {
-          inherit username usermail userfullname userbusinessmail userauthorizedkeys;
+          inherit username usermail userfullname userbusinessmail userfullbusinessname userauthorizedkeys;
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
