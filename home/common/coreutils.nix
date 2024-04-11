@@ -64,7 +64,8 @@
 
     eza = {
       enable = true;
-      enableAliases = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
       extraOptions = [
         "--icons"
         "--group-directories-first"
