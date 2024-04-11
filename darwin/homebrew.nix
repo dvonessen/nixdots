@@ -37,6 +37,10 @@
         name = "onedrive";
         greedy = true;
       }
+      {
+        name = "microsoft-remote-desktop";
+        greedy = true;
+      }
     ];
     global.autoUpdate = false;
     onActivation = {
